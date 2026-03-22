@@ -19,10 +19,10 @@ export default function Home() {
               <span className="text-accent font-semibold text-sm tracking-widest uppercase">Design de Convivência</span>
             </div>
             <h1 className="text-foreground mb-6 leading-tight">
-              Casa bonita. Organizada. Sem estresse.
+              Casa de revista na vida real
             </h1>
             <p className="text-muted-foreground text-xl mb-8 leading-relaxed max-w-2xl">
-              Pets integrados. Crianças brincando. Tudo no lugar. Tudo bonito. Sem conflitos, sem bagunça, sem culpa. Só uma casa onde a vida flui naturalmente.
+              Aquela casa linda que você vê em revista, mas que REALMENTE funciona. Com pets integrados, crianças brincando, tudo no lugar, tudo bonito. Sem conflitos, sem bagunça, sem culpa.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/galeria">
@@ -170,10 +170,10 @@ export default function Home() {
         <section className="py-20 bg-background">
           <div className="container">
             <div className="max-w-3xl">
-              <h2 className="mb-8">A Harmonia que Você Sempre Quis</h2>
+              <h2 className="mb-8">Casa de Revista na Vida Real</h2>
               <div className="space-y-6">
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  KASA SISSI não faz móveis "para pet" ou "para criança". Faz móveis para casas bonitas, organizadas e sem estresse.
+                  KASA SISSI não faz móveis "para pet" ou "para criança". Faz móveis para aquela casa linda que você vê em revista, mas que REALMENTE funciona.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-lg">
                   Onde seu cão descansa em um nicho elegante. Seu gato explora prateleiras que decoram. Sua criança brinca sem bagunça. Você trabalha em paz. Tudo no lugar. Tudo bonito.
