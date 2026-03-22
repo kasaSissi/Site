@@ -34,7 +34,7 @@ export default function Home() {
                 </a>
               </Link>
               <a
-                href="https://wa.me/5541846815605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seu%20design%20de%20convivência."
+                href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seu%20design%20de%20convivência."
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -205,7 +205,7 @@ export default function Home() {
                 </a>
               </Link>
               <a
-                href="https://wa.me/5541846815605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20o%20design%20de%20convivência."
+                href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20o%20design%20de%20convivência."
                 target="_blank"
                 rel="noopener noreferrer"
               >

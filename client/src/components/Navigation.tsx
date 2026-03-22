@@ -10,7 +10,8 @@ export default function Navigation() {
     { href: '/', label: 'Início' },
     { href: '/galeria', label: 'Galeria' },
     { href: '/sobre', label: 'Sobre' },
-    { href: '/contato', label: 'Contato' }
+    { href: '/contato', label: 'Contato' },
+    { href: 'https://www.mercadolivre.com.br/pagina/kasa_sissi?utm_source=ig&utm_medium=social&utm_content=link_in_bio', label: 'Mercado Livre', external: true }
   ];
 
   return (
@@ -28,18 +29,33 @@ export default function Navigation() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map(link => (
-            <Link key={link.href} href={link.href}>
-              <a className="text-foreground hover:text-accent transition-colors font-medium">
-                {link.label}
-              </a>
-            </Link>
-          ))}
+          {navLinks.map(link => {
+            if (link.external) {
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-accent transition-colors font-medium"
+                >
+                  {link.label}
+                </a>
+              );
+            }
+            return (
+              <Link key={link.href} href={link.href}>
+                <a className="text-foreground hover:text-accent transition-colors font-medium">
+                  {link.label}
+                </a>
+              </Link>
+            );
+          })}
         </div>
 
         {/* CTA Button */}
         <a
-          href="https://wa.me/5541846815605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis."
+          href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis."
           target="_blank"
           rel="noopener noreferrer"
           className="hidden sm:block"
@@ -63,18 +79,34 @@ export default function Navigation() {
       {isOpen && (
         <div className="md:hidden border-t border-border bg-background">
           <div className="container py-4 flex flex-col gap-4">
-            {navLinks.map(link => (
-              <Link key={link.href} href={link.href}>
-                <a
-                  className="text-foreground hover:text-accent transition-colors font-medium"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.label}
-                </a>
-              </Link>
-            ))}
+            {navLinks.map(link => {
+              if (link.external) {
+                return (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground hover:text-accent transition-colors font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                );
+              }
+              return (
+                <Link key={link.href} href={link.href}>
+                  <a
+                    className="text-foreground hover:text-accent transition-colors font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                </Link>
+              );
+            })}
             <a
-              href="https://wa.me/5541846815605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis."
+              href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis."
               target="_blank"
               rel="noopener noreferrer"
             >

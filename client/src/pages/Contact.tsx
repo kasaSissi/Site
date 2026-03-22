@@ -25,7 +25,7 @@ export default function Contact() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               {/* WhatsApp */}
               <a
-                href="https://wa.me/5541846815605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis."
+                href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group"
@@ -38,7 +38,7 @@ export default function Contact() {
                   <p className="text-muted-foreground mb-4">
                     Atendimento rápido e personalizado
                   </p>
-                  <p className="text-accent font-semibold">+55 41 8468-1605</p>
+                  <p className="text-accent font-semibold">+55 41 98468-1605</p>
                 </div>
               </a>
 
@@ -142,7 +142,7 @@ export default function Contact() {
               Estamos aqui para ajudar! Fale conosco via WhatsApp ou qualquer um de nossos canais.
             </p>
             <a
-              href="https://wa.me/5541846815605?text=Olá%20KASA%20SISSI!%20Tenho%20uma%20dúvida."
+              href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Tenho%20uma%20dúvida."
               target="_blank"
               rel="noopener noreferrer"
             >

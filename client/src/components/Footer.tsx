@@ -30,8 +30,8 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2">
                 <Phone size={16} />
-                <a href="https://wa.me/5541846815605" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
-                  +55 41 8468-1605
+                <a href="https://wa.me/5541984681605" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                  +55 41 98468-1605
                 </a>
               </li>
               <li className="flex items-center gap-2">
@@ -40,6 +40,13 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+
+        {/* Parceria */}
+        <div className="border-t border-border pt-8 pb-8">
+          <p className="text-xs text-muted-foreground mb-3">
+            Parceria com <a href="https://www.instagram.com/chikoikiare?igsh=MWV0d2hleWZleTZoeQ==" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80 font-semibold">Chiko i Kiare</a> - Fábrica de Móveis Premium
+          </p>
         </div>
 
         {/* Redes Sociais */}
@@ -55,7 +62,15 @@ export default function Footer() {
               Instagram
             </a>
             <a
-              href="https://wa.me/5541846815605"
+              href="https://www.mercadolivre.com.br/pagina/kasa_sissi?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Mercado Livre
+            </a>
+            <a
+              href="https://wa.me/5541984681605"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"

@@ -113,7 +113,7 @@ export default function About() {
               Fale conosco e descubra como podemos transformar seu espaço em um lugar ainda mais especial.
             </p>
             <a
-              href="https://wa.me/5541846815605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis."
+              href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis."
               target="_blank"
               rel="noopener noreferrer"
             >
