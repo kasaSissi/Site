@@ -19,10 +19,10 @@ export default function Home() {
               <span className="text-accent font-semibold text-sm tracking-widest uppercase">Design de Convivência</span>
             </div>
             <h1 className="text-foreground mb-6 leading-tight">
-              Casa para quem vive de verdade
+              Casa bonita. Organizada. Sem estresse.
             </h1>
             <p className="text-muted-foreground text-xl mb-8 leading-relaxed max-w-2xl">
-              Móveis bonitos que acomodam a vida real. Sem estigmas. Sem parecer petshop ou brinquedoteca. Só uma casa elegante onde cão, gato, criança e adulto convivem naturalmente.
+              Pets integrados. Crianças brincando. Tudo no lugar. Tudo bonito. Sem conflitos, sem bagunça, sem culpa. Só uma casa onde a vida flui naturalmente.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/galeria">
@@ -170,16 +170,16 @@ export default function Home() {
         <section className="py-20 bg-background">
           <div className="container">
             <div className="max-w-3xl">
-              <h2 className="mb-8">Para Quem Vive de Verdade</h2>
+              <h2 className="mb-8">A Harmonia que Você Sempre Quis</h2>
               <div className="space-y-6">
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  A KASA SISSI não faz móveis "para pet". Não faz móveis "para criança". Faz móveis para famílias reais.
+                  KASA SISSI não faz móveis "para pet" ou "para criança". Faz móveis para casas bonitas, organizadas e sem estresse.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  Casas onde cão descansa, gato explora, criança brinca, adulto trabalha. Tudo no mesmo espaço. Sem estigmas. Sem parecer petshop ou brinquedoteca.
+                  Onde seu cão descansa em um nicho elegante. Seu gato explora prateleiras que decoram. Sua criança brinca sem bagunça. Você trabalha em paz. Tudo no lugar. Tudo bonito.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  Móveis bonitos que acomodam a vida. Elegantes e funcionais. Que decoram E servem. Que são revista E são vividas.
+                  Sem conflitos entre beleza e funcionalidade. Sem culpa de "sujar" a casa. Sem parecer petshop ou brinquedoteca. Só uma casa que flui naturalmente.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-lg">
                   Isso é Design de Convivência. Isso é KASA SISSI.
