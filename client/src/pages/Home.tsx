@@ -19,10 +19,10 @@ export default function Home() {
               <span className="text-accent font-semibold text-sm tracking-widest uppercase">Design de Convivência</span>
             </div>
             <h1 className="text-foreground mb-6 leading-tight">
-              Convivência Pensada
+              Casa para quem vive de verdade
             </h1>
             <p className="text-muted-foreground text-xl mb-8 leading-relaxed max-w-2xl">
-              Não é só móvel. É a casa no modo vida real. Onde cães descansam, gatos exploram, crianças brincam e a família inteira convive em harmonia.
+              Móveis bonitos que acomodam a vida real. Sem estigmas. Sem parecer petshop ou brinquedoteca. Só uma casa elegante onde cão, gato, criança e adulto convivem naturalmente.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/galeria">
@@ -170,16 +170,16 @@ export default function Home() {
         <section className="py-20 bg-background">
           <div className="container">
             <div className="max-w-3xl">
-              <h2 className="mb-8">Casa no Modo Vida Real</h2>
+              <h2 className="mb-8">Para Quem Vive de Verdade</h2>
               <div className="space-y-6">
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  A KASA SISSI não acredita em casas de revista onde ninguém vive. Acredita em espaços onde a vida acontece de verdade.
+                  A KASA SISSI não faz móveis "para pet". Não faz móveis "para criança". Faz móveis para famílias reais.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  Onde cães descansam nos móveis, gatos exploram prateleiras, crianças brincam no chão, e a família inteira convive sem culpa de "sujar" o espaço.
+                  Casas onde cão descansa, gato explora, criança brinca, adulto trabalha. Tudo no mesmo espaço. Sem estigmas. Sem parecer petshop ou brinquedoteca.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  Cada peça é pensada para ser bonita E funcional. Para decorar E servir. Para ser revista E ser vivida.
+                  Móveis bonitos que acomodam a vida. Elegantes e funcionais. Que decoram E servem. Que são revista E são vividas.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-lg">
                   Isso é Design de Convivência. Isso é KASA SISSI.
