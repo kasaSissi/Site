@@ -30,8 +30,8 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2">
                 <Phone size={16} />
-                <a href="https://wa.me/5541988681605" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
-                  +55 41 98868-1605
+                <a href="https://wa.me/5541846815605" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                  +55 41 8468-1605
                 </a>
               </li>
               <li className="flex items-center gap-2">
@@ -47,7 +47,7 @@ export default function Footer() {
           <p className="text-xs">© 2024 KASA SISSI. Todos os direitos reservados.</p>
           <div className="flex gap-4">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/kasa.sissi?igsh=MTlqeTFmcHhkcnk0YQ=="
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -55,7 +55,7 @@ export default function Footer() {
               Instagram
             </a>
             <a
-              href="https://wa.me/5541988681605"
+              href="https://wa.me/5541846815605"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"

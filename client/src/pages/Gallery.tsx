@@ -173,7 +173,7 @@ export default function Gallery() {
                 </p>
               </div>
               <a
-                href="https://wa.me/5541988681605?text=Olá%20KASA%20SISSI!%20Tenho%20interesse%20neste%20produto."
+                href="https://wa.me/5541846815605?text=Olá%20KASA%20SISSI!%20Tenho%20interesse%20neste%20produto."
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -207,7 +207,7 @@ export default function Gallery() {
               Ou, se preferir, envie suas fotos via WhatsApp que nós adicionamos para você!
             </p>
             <a
-              href="https://wa.me/5541988681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20adicionar%20fotos%20de%20produtos%20ao%20site."
+              href="https://wa.me/5541846815605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20adicionar%20fotos%20de%20produtos%20ao%20site."
               target="_blank"
               rel="noopener noreferrer"
             >

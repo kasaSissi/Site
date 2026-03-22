@@ -39,7 +39,7 @@ export default function Navigation() {
 
         {/* CTA Button */}
         <a
-          href="https://wa.me/5541988681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis."
+          href="https://wa.me/5541846815605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis."
           target="_blank"
           rel="noopener noreferrer"
           className="hidden sm:block"
@@ -74,7 +74,7 @@ export default function Navigation() {
               </Link>
             ))}
             <a
-              href="https://wa.me/5541988681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis."
+              href="https://wa.me/5541846815605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis."
               target="_blank"
               rel="noopener noreferrer"
             >
