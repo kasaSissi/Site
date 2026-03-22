@@ -44,9 +44,16 @@ export default function Footer() {
 
         {/* Parceria */}
         <div className="border-t border-border pt-8 pb-8">
-          <p className="text-xs text-muted-foreground mb-3">
-            Parceria com <a href="https://www.instagram.com/chikoikiare?igsh=MWV0d2hleWZleTZoeQ==" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80 font-semibold">Chiko i Kiare</a> - Fábrica de Móveis Premium
-          </p>
+          <div className="flex items-center gap-4 mb-3">
+            <img
+              src="https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/IMG-20250611-WA0031_boh0vh"
+              alt="Chiko i Kiare"
+              className="h-8 w-auto"
+            />
+            <p className="text-xs text-muted-foreground">
+              Parceria com <a href="https://www.instagram.com/chikoikiare?igsh=MWV0d2hleWZleTZoeQ==" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80 font-semibold">Chiko i Kiare</a> - Fábrica de Móveis Premium
+            </p>
+          </div>
         </div>
 
         {/* Redes Sociais */}

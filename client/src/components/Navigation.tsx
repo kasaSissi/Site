@@ -19,11 +19,12 @@ export default function Navigation() {
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/">
-          <a className="flex items-center gap-2 font-display text-2xl font-bold text-accent hover:opacity-80 transition-opacity">
-            <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-primary-foreground">
-              K
-            </div>
-            <span className="hidden sm:inline">KASA SISSI</span>
+          <a className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <img
+              src="https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/IMG-20251214-WA0000_nv3uib"
+              alt="KASA SISSI"
+              className="h-10 w-auto"
+            />
           </a>
         </Link>
 
