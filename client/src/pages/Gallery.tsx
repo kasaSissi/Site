@@ -176,7 +176,7 @@ export default function Gallery() {
                       : 'bg-muted text-foreground hover:bg-muted/80'
                   }`}
                 >
-                  Mais Inspirações
+                  Galeria de Fotos
                 </button>
               )}
             </div>
@@ -194,7 +194,7 @@ export default function Gallery() {
             ) : showBanco ? (
               bancoProducts.length > 0 ? (
                 <>
-                  <h2 className="text-2xl font-display mb-8">Mais Inspirações</h2>
+                  <h2 className="text-2xl font-display mb-8">Galeria de Fotos</h2>
                   {renderProductGrid(bancoProducts)}
                 </>
               ) : (
@@ -297,7 +297,7 @@ export default function Gallery() {
                   <li><code className="bg-muted px-2 py-1 rounded">mesas</code> - Mesas</li>
                   <li><code className="bg-muted px-2 py-1 rounded">prateleiras</code> - Prateleiras</li>
                   <li><code className="bg-muted px-2 py-1 rounded">outros</code> - Outros móveis</li>
-                  <li><code className="bg-muted px-2 py-1 rounded">banco</code> - Pool geral (Mais Inspirações)</li>
+                  <li><code className="bg-muted px-2 py-1 rounded">banco</code> - Galeria de Fotos (fotos menos editadas)</li>
                 </ul>
               </li>
               <li>As imagens aparecerão automaticamente aqui!</li>
