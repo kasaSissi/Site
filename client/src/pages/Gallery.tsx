@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { MessageCircle } from 'lucide-react';
+import { MessageCircle, Loader2 } from 'lucide-react';
 
 const CATEGORIES = [
   { id: 'all', label: 'Todos' },
@@ -20,35 +20,72 @@ interface Product {
   name: string;
   category: string;
   description: string;
-  image?: string;
+  image: string;
 }
 
-// Sample products - will be replaced with user uploads
-const SAMPLE_PRODUCTS: Product[] = [
-  {
-    id: '1',
-    name: 'Cozinha Infantil Rosa',
-    category: 'cozinhas',
-    description: 'Cozinha de marcenaria com acabamento em rosa e bege. Inclui fogão, forno, pia e espaço de armazenamento.',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663464703620/LYJWvfzjFHVYE4ctjw5Kqb/children-kitchen-cGTfJHgNvfGNAhXkpudWhc.webp'
-  },
-  {
-    id: '2',
-    name: 'Móvel Pet Integrado',
-    category: 'pet',
-    description: 'Cama para pet integrada a prateleiras e nichos. Madeira natural com almofada cinza.',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663464703620/LYJWvfzjFHVYE4ctjw5Kqb/pet-furniture-6oxNy5fvDwwXaBRA6dKgUU.webp'
-  }
-];
+const CLOUDINARY_CLOUD_NAME = 'dipruvqks';
+const CLOUDINARY_PRESET = 'Sitekasasissi';
 
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [showUploadInfo, setShowUploadInfo] = useState(false);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  // Fetch images from Cloudinary
+  useEffect(() => {
+    const fetchCloudinaryImages = async () => {
+      try {
+        setLoading(true);
+        // Fetch resources from Cloudinary using their API
+        const response = await fetch(
+          `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/list/${CLOUDINARY_PRESET}.json`
+        );
+        
+        if (response.ok) {
+          const data = await response.json();
+          
+          // Transform Cloudinary resources into products
+          const transformedProducts: Product[] = data.resources.map((resource: any, index: number) => {
+            // Extract category from tags or use 'outros' as default
+            const tags = resource.tags || [];
+            let category = 'outros';
+            
+            CATEGORIES.forEach(cat => {
+              if (cat.id !== 'all' && tags.includes(cat.id)) {
+                category = cat.id;
+              }
+            });
+
+            return {
+              id: resource.public_id,
+              name: resource.display_name || `Produto ${index + 1}`,
+              category: category,
+              description: resource.description || 'Móvel funcional e elegante para sua casa.',
+              image: resource.secure_url
+            };
+          });
+
+          setProducts(transformedProducts);
+        } else {
+          // Fallback if API fails
+          setProducts([]);
+        }
+      } catch (error) {
+        console.error('Erro ao carregar imagens:', error);
+        setProducts([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCloudinaryImages();
+  }, []);
 
   const filteredProducts = selectedCategory === 'all'
-    ? SAMPLE_PRODUCTS
-    : SAMPLE_PRODUCTS.filter(p => p.category === selectedCategory);
+    ? products
+    : products.filter(p => p.category === selectedCategory);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -89,7 +126,12 @@ export default function Gallery() {
         {/* Gallery Grid */}
         <section className="py-16 bg-background">
           <div className="container">
-            {filteredProducts.length > 0 ? (
+            {loading ? (
+              <div className="flex justify-center items-center py-16">
+                <Loader2 className="animate-spin mr-2" size={24} />
+                <p className="text-muted-foreground">Carregando produtos...</p>
+              </div>
+            ) : filteredProducts.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredProducts.map(product => (
                   <div
@@ -98,17 +140,11 @@ export default function Gallery() {
                     onClick={() => setSelectedProduct(product)}
                   >
                     <div className="overflow-hidden rounded-lg mb-4 bg-muted">
-                      {product.image ? (
-                        <img
-                          src={product.image}
-                          alt={product.name}
-                          className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                      ) : (
-                        <div className="w-full h-64 flex items-center justify-center text-muted-foreground">
-                          Sem imagem
-                        </div>
-                      )}
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
                     </div>
                     <h3 className="text-lg font-display mb-2 group-hover:text-accent transition-colors">
                       {product.name}
@@ -136,20 +172,22 @@ export default function Gallery() {
         </section>
 
         {/* Upload Info Section */}
-        <section className="py-16 bg-secondary/20">
-          <div className="container text-center">
-            <h2 className="mb-6">Sua galeria está vazia?</h2>
-            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Você pode fazer upload de suas fotos de produtos diretamente neste site. Clique no botão abaixo para começar.
-            </p>
-            <Button
-              onClick={() => setShowUploadInfo(true)}
-              className="bg-accent hover:bg-accent/90 text-primary-foreground"
-            >
-              Como Fazer Upload de Produtos
-            </Button>
-          </div>
-        </section>
+        {products.length === 0 && !loading && (
+          <section className="py-16 bg-secondary/20">
+            <div className="container text-center">
+              <h2 className="mb-6">Sua galeria está vazia?</h2>
+              <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+                Faça upload de suas fotos no Cloudinary e elas aparecerão automaticamente aqui!
+              </p>
+              <Button
+                onClick={() => setShowUploadInfo(true)}
+                className="bg-accent hover:bg-accent/90 text-primary-foreground"
+              >
+                Como Fazer Upload de Produtos
+              </Button>
+            </div>
+          </section>
+        )}
       </main>
 
       {/* Product Modal */}
@@ -195,27 +233,17 @@ export default function Gallery() {
           </DialogHeader>
           <div className="space-y-4">
             <p className="text-muted-foreground">
-              Para adicionar suas fotos de produtos, você pode:
+              Para adicionar suas fotos de produtos automaticamente:
             </p>
             <ol className="list-decimal list-inside space-y-3 text-muted-foreground">
-              <li>Criar uma conta gratuita no <strong>Cloudinary</strong> (cloudinary.com)</li>
-              <li>Fazer upload de suas fotos lá</li>
-              <li>Copiar o link da imagem</li>
-              <li>Entrar em contato conosco via WhatsApp para adicionar ao site</li>
+              <li>Acesse sua conta no <strong>Cloudinary</strong> (cloudinary.com)</li>
+              <li>Faça upload de suas fotos de produtos</li>
+              <li>Adicione tags para categorizar (ex: "cozinhas", "pet", "mesas", etc.)</li>
+              <li>As imagens aparecerão automaticamente aqui!</li>
             </ol>
-            <p className="text-sm text-muted-foreground mt-6">
-              Ou, se preferir, envie suas fotos via WhatsApp que nós adicionamos para você!
+            <p className="text-sm text-muted-foreground mt-6 font-semibold">
+              💡 Dica: Use as tags: cozinhas, bancadas, pet, mesas, prateleiras, outros
             </p>
-            <a
-              href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20adicionar%20fotos%20de%20produtos%20ao%20site."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button className="w-full bg-accent hover:bg-accent/90 text-primary-foreground">
-                <MessageCircle className="mr-2" size={20} />
-                Fale Conosco
-              </Button>
-            </a>
           </div>
         </DialogContent>
       </Dialog>
