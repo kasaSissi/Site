@@ -20,8 +20,8 @@ const faqs = [
     a: 'Temos modelos para as duas situações. Consulte as opções disponíveis pelo WhatsApp e veja qual se encaixa melhor na sua casa.',
   },
   {
-    q: 'Posso combinar nichos e prateleiras para criar um percurso para o gato?',
-    a: 'Com certeza! Esse é um dos projetos mais pedidos. Combinamos nichos, prateleiras e camas elevadas para criar percursos elegantes e funcionais para os gatos.',
+    q: 'Vocês fazem projetos personalizados de gatificação?',
+    a: 'Sim! Criamos projetos personalizados de gatificação para a sua casa. Combinamos nichos, prateleiras e camas para criar um ambiente elegante e funcional para o seu gato. Fale com a gente pelo WhatsApp para saber mais.',
   },
   {
     q: 'Vocês entregam em todo o Brasil?',
@@ -97,7 +97,7 @@ export default function MoveisGatos() {
                 A <strong>cama de gato</strong> integra o felino ao ambiente e vira um ponto focal bonito na decoração. O <strong>nicho para gato em MDF</strong> com almofada é confortável, resistente e elegante — combina com qualquer estilo de casa.
               </p>
               <p>
-                Para quem quer ir além, temos <strong>playground para gatos</strong> com percursos completos: nichos, prateleiras e passarelas que criam um espaço de exploração para o gato — sem parecer que você mora num petshop.
+                Para quem quer ir além, temos <strong>projetos personalizados de gatificação</strong>: combinamos nichos, prateleiras e camas para criar um ambiente completo e elegante para o seu gato — sem parecer que você mora num petshop.
               </p>
               <p>
                 Isso é gatificação KASA SISSI: estética, funcional e integrada à vida real da sua casa.
@@ -118,6 +118,26 @@ export default function MoveisGatos() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Projetos Personalizados de Gatificação */}
+        <section className="py-16 bg-secondary/20">
+          <div className="container max-w-3xl text-center">
+            <div className="text-4xl mb-4">🐱</div>
+            <h2 className="text-3xl font-display mb-4">Projetos Personalizados de Gatificação</h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
+              Quer criar um ambiente completo para o seu gato? Combinamos nichos, prateleiras e camas para montar a gatificação ideal para a sua casa — com o estilo KASA SISSI que você já conhece.
+            </p>
+            <a
+              href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent('Olá, vim pelo site e quero saber mais sobre projetos personalizados de gatificação!')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white">
+                💬 Saiba mais no WhatsApp
+              </Button>
+            </a>
           </div>
         </section>
 
