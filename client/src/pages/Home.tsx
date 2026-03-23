@@ -22,7 +22,7 @@ export default function Home() {
               Casa de revista na vida real
             </h1>
             <p className="text-muted-foreground text-xl mb-8 leading-relaxed max-w-2xl">
-              Aquela casa cheia de vida e alegria que você vê em revista, mas que REALMENTE funciona. Com pets, crianças e momentos reais. Tudo no lugar, tudo bonito. Sem cara de petshop. Sem cara de brinquedoteca. Só casa.
+              Aquela casa linda de revista, mas com vida de verdade. Com pets, crianças e momentos reais. Tudo no lugar, tudo bonito. Sem perder o estilo. Sem virar petshop. Sem virar brinquedoteca.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/galeria">
@@ -161,19 +161,19 @@ export default function Home() {
         <section className="py-20 bg-background">
           <div className="container">
             <div className="max-w-3xl">
-              <h2 className="mb-8 text-3xl font-display">Casa de Revista na Vida Real</h2>
+              <h2 className="mb-8 text-3xl font-display">A Casa de Revista com Vida de Verdade</h2>
               <div className="space-y-6">
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  A KASA SISSI não faz móveis "para pet" ou "para criança". Faz móveis para aquela casa linda que você vê em revista, mas que REALMENTE funciona.
+                  A casa de revista é linda. Mas é fria. É vazia. Parece que ninguém mora lá.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  Onde seu cão descansa em um nicho elegante. Onde a <strong>gatificação</strong> acontece através de prateleiras que decoram. Onde a cozinha de brincar da sua filha se integra à paleta da casa. Onde a prateleira da entrada organiza sem perder o estilo. Uma casa cheia de vida e alegria, mas toda integrada.
+                  A KASA SISSI existe para devolver a vida a ela. O cão que descansa no nicho elegante. O gato que sobe pelas prateleiras que decoram. A criança que cozinha de mentira na cozinha de brincar que combina com a sua. A prateleira da entrada que organiza o caos do dia a dia sem perder o estilo.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  Sem cara de petshop. Sem cara de brinquedoteca. Sem conflito entre beleza e funcionalidade. Sem culpa de "estragar" a decoração.
+                  Vida, alegria e movimento. Sem virar petshop. Sem virar brinquedoteca. Sem culpa de "estragar" a decoração.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-lg font-medium text-foreground">
-                  Só uma casa que flui naturalmente. Isso é Design de Convivência. Isso é KASA SISSI.
+                  Uma casa que respira. Isso é Design de Convivência. Isso é KASA SISSI.
                 </p>
               </div>
             </div>
