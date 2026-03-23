@@ -16,8 +16,8 @@ const faqs = [
     a: 'O quarto montessori é um ambiente pensado para a autonomia da criança: móveis na altura dela, espaços acessíveis, organização visual. Na KASA SISSI, aplicamos esses princípios sem abrir mão do estilo.',
   },
   {
-    q: 'Vocês fazem cabeceira infantil?',
-    a: 'Sim! Temos modelos de cabeceira infantil em MDF com design moderno e acabamento impecável. Consulte as opções pelo WhatsApp.',
+    q: 'Os móveis infantis são fáceis de montar?',
+    a: 'Sim! Todos os móveis vêm com instruções de montagem e podem ser instalados sem dificuldade. Em caso de dúvida, fale com a gente pelo WhatsApp.',
   },
   {
     q: 'Os móveis combinam com outros estilos de decoração?',
@@ -51,7 +51,7 @@ export default function QuartoInfantil() {
               Mais do que um móvel — uma forma de integrar infância, casa e convivência real.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-2xl">
-              Móveis infantis em MDF para quarto: cabeceira, bancada, mesa e muito mais. Design montessoriano que incentiva a autonomia e combina com a decoração da casa. Sem cara de brinquedoteca.
+              Móveis infantis em MDF para quarto: bancada, mesa, cadeira e muito mais. Design montessoriano que incentiva a autonomia e combina com a decoração da casa. Sem cara de brinquedoteca.
             </p>
             <a href={`https://wa.me/${WA_NUMBER}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white">
@@ -99,9 +99,6 @@ export default function QuartoInfantil() {
               </p>
               <p>
                 Nossa linha de <strong>móveis quarto infantil</strong> inclui bancadas de atividades, mesas, cadeiras e peças de organização, todos em MDF de alta qualidade com acabamento impecável. O design segue os princípios do <strong>quarto montessori</strong>: altura adequada, autonomia incentivada, organização visual.
-              </p>
-              <p>
-                A <strong>cabeceira infantil</strong> em MDF é uma das peças mais pedidas. Com design minimalista e nórdico, ela transforma o quarto da criança sem conflitar com a decoração do resto da casa.
               </p>
               <p>
                 Um quarto infantil KASA SISSI é um quarto com vida, alegria e estilo. Exatamente como a casa de revista que você sempre quis — mas com criança de verdade morando lá.
