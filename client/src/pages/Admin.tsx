@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Trash2, Plus, Edit2, Save, Loader2, Download } from 'lucide-react';
 import { useLocation } from 'wouter';
+import { getLoginUrl } from '@/const';
 
 const CATEGORIES = [
   { id: 'cozinha', label: 'Cozinhas Infantis' },
@@ -198,7 +199,20 @@ export default function Admin() {
   }
 
   if (!isAuthenticated) {
-    return null;
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <div className="text-center">
+          <h1 className="text-3xl font-display mb-4">Painel Admin</h1>
+          <p className="text-muted-foreground mb-8">Você precisa fazer login para acessar o painel administrativo</p>
+          <Button
+            onClick={() => window.location.href = getLoginUrl()}
+            className="bg-accent hover:bg-accent/90 text-primary-foreground"
+          >
+            Fazer Login
+          </Button>
+        </div>
+      </div>
+    );
   }
 
   return (
