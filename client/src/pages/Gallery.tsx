@@ -6,7 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { MessageCircle, Loader2, Trash2, Plus } from 'lucide-react';
-import { fetchCloudinaryImages } from '@/lib/cloudinary';
+import productsData from '@/data/products.json';
 
 const CATEGORIES = [
   { id: 'all', label: 'Todos' },
@@ -43,17 +43,19 @@ export default function Gallery() {
     isBanco: false
   });
 
-  // Fetch images from Cloudinary on component mount
+  // Load products from JSON file
   useEffect(() => {
-    const loadImages = async () => {
-      setLoading(true);
-      const { products: fetchedProducts, bancoProducts: fetchedBancoProducts } = await fetchCloudinaryImages();
-      setProducts(fetchedProducts);
-      setBancoProducts(fetchedBancoProducts);
+    setLoading(true);
+    try {
+      setProducts(productsData.products || []);
+      setBancoProducts(productsData.bancoProducts || []);
+    } catch (error) {
+      console.error('Erro ao carregar produtos:', error);
+      setProducts([]);
+      setBancoProducts([]);
+    } finally {
       setLoading(false);
-    };
-
-    loadImages();
+    }
   }, []);
 
   const addProduct = () => {

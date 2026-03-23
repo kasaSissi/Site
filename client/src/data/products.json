@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": "cozinha-1",
+      "name": "Cozinha Infantil Premium",
+      "category": "cozinha",
+      "description": "Cozinha infantil em MDF premium com acabamento impecável. Perfeita para crianças de 4 a 10 anos.",
+      "image": "https://res.cloudinary.com/7abf63b8135fcdce3499e218d6d578/image/upload/v1/Home/seu-arquivo-aqui"
+    },
+    {
+      "id": "pet-1",
+      "name": "Nicho Pet Elegante",
+      "category": "pet",
+      "description": "Nicho para cães e gatos que decora enquanto funciona. Design integrado à sua casa.",
+      "image": "https://res.cloudinary.com/7abf63b8135fcdce3499e218d6d578/image/upload/v1/Home/seu-arquivo-aqui"
+    }
+  ],
+  "bancoProducts": [
+    {
+      "id": "banco-1",
+      "name": "Inspiração 1",
+      "category": "outros",
+      "description": "Ambiente integrado com móveis KASA SISSI.",
+      "image": "https://res.cloudinary.com/7abf63b8135fcdce3499e218d6d578/image/upload/v1/Home/seu-arquivo-aqui",
+      "isBanco": true
+    }
+  ]
+}
