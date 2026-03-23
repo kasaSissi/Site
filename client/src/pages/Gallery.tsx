@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { MessageCircle, Loader2, Trash2, Plus } from 'lucide-react';
+import { MessageCircle, Loader2 } from 'lucide-react';
 import productsData from '@/data/products.json';
 
 const CATEGORIES = [
@@ -36,14 +36,7 @@ export default function Gallery() {
   const [bancoProducts, setBancoProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [showBanco, setShowBanco] = useState(false);
-  const [showAddForm, setShowAddForm] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    category: 'cozinha',
-    description: '',
-    image: '',
-    isBanco: false
-  });
+
 
   // Load products from JSON file
   useEffect(() => {
@@ -60,54 +53,7 @@ export default function Gallery() {
     }
   }, []);
 
-  const addProduct = () => {
-    if (!formData.image.trim()) {
-      alert('Por favor, adicione um link de imagem');
-      return;
-    }
 
-    const newProduct: Product = {
-      id: `product-${Date.now()}`,
-      name: formData.name || `Produto ${products.length + 1}`,
-      category: formData.category,
-      description: formData.description || 'Móvel funcional e elegante para sua casa.',
-      image: formData.image,
-      isBanco: formData.isBanco
-    };
-
-    if (formData.isBanco) {
-      setBancoProducts([...bancoProducts, newProduct]);
-    } else {
-      setProducts([...products, newProduct]);
-    }
-
-    // Reset form
-    setFormData({
-      name: '',
-      category: 'cozinha',
-      description: '',
-      image: '',
-      isBanco: false
-    });
-    setShowAddForm(false);
-  };
-
-  const deleteProduct = (id: string, isBanco: boolean) => {
-    if (confirm('Tem certeza que quer deletar?')) {
-      if (isBanco) {
-        setBancoProducts(bancoProducts.filter(p => p.id !== id));
-      } else {
-        setProducts(products.filter(p => p.id !== id));
-      }
-    }
-  };
-
-  const setCover = (id: string) => {
-    setProducts(products.map(p => ({
-      ...p,
-      isCover: p.id === id
-    })));
-  };
 
   const filteredProducts = selectedCategory === 'all' 
     ? products 
@@ -127,40 +73,16 @@ export default function Gallery() {
             ) : (
               <p className="text-muted-foreground">Imagem não carregada</p>
             )}
-            {product.isCover && (
-              <div className="absolute top-2 right-2 bg-accent text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
-                Capa
-              </div>
-            )}
+
           </div>
           <h3 className="text-lg font-display mb-2">{product.name}</h3>
           <p className="text-muted-foreground text-sm mb-4">{product.description}</p>
-          <div className="flex gap-2 flex-wrap">
-            <button
-              onClick={() => setSelectedProduct(product)}
-              className="flex-1 text-accent hover:text-accent/80 font-semibold text-sm"
-            >
-              Ver detalhes
-            </button>
-            {!product.isBanco && (
-              <button
-                onClick={() => setCover(product.id)}
-                className={`text-xs px-2 py-1 rounded ${
-                  product.isCover 
-                    ? 'bg-accent text-primary-foreground' 
-                    : 'bg-muted text-foreground hover:bg-muted/80'
-                }`}
-              >
-                {product.isCover ? '✓ Capa' : 'Marcar Capa'}
-              </button>
-            )}
-            <button
-              onClick={() => deleteProduct(product.id, product.isBanco || false)}
-              className="text-destructive hover:text-destructive/80"
-            >
-              <Trash2 size={18} />
-            </button>
-          </div>
+          <button
+            onClick={() => setSelectedProduct(product)}
+            className="text-accent hover:text-accent/80 font-semibold text-sm"
+          >
+            Ver detalhes
+          </button>
         </div>
       ))}
     </div>
@@ -184,16 +106,7 @@ export default function Gallery() {
         {/* Gallery Section */}
         <section className="py-16">
           <div className="container">
-            {/* Add Product Button */}
-            <div className="mb-12">
-              <Button
-                onClick={() => setShowAddForm(true)}
-                className="bg-accent hover:bg-accent/90 text-primary-foreground"
-              >
-                <Plus size={20} className="mr-2" />
-                Adicionar Produto
-              </Button>
-            </div>
+
 
             {/* Category Filter */}
             <div className="mb-12">
@@ -282,79 +195,7 @@ export default function Gallery() {
         </section>
       </main>
 
-      {/* Add Product Form Dialog */}
-      <Dialog open={showAddForm} onOpenChange={setShowAddForm}>
-        <DialogContent className="max-w-md">
-          <DialogHeader>
-            <DialogTitle>Adicionar Novo Produto</DialogTitle>
-          </DialogHeader>
-          <div className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium mb-2">Nome do Produto</label>
-              <Input
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                placeholder="Ex: Cozinha Infantil Premium"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-2">Categoria</label>
-              <select
-                value={formData.category}
-                onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                className="w-full px-3 py-2 border border-border rounded-lg"
-              >
-                {CATEGORIES.filter(c => c.id !== 'all').map(cat => (
-                  <option key={cat.id} value={cat.id}>{cat.label}</option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-2">Descrição</label>
-              <Textarea
-                value={formData.description}
-                onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                placeholder="Descreva o móvel..."
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-2">Link da Imagem (Cloudinary)</label>
-              <Input
-                value={formData.image}
-                onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-                placeholder="https://res.cloudinary.com/..."
-              />
-            </div>
-            <div className="flex items-center gap-2">
-              <input
-                type="checkbox"
-                id="isBanco"
-                checked={formData.isBanco}
-                onChange={(e) => setFormData({ ...formData, isBanco: e.target.checked })}
-                className="rounded"
-              />
-              <label htmlFor="isBanco" className="text-sm font-medium">
-                Adicionar à Galeria de Fotos (pool geral)
-              </label>
-            </div>
-            <div className="flex gap-2 pt-4">
-              <Button
-                onClick={addProduct}
-                className="flex-1 bg-accent hover:bg-accent/90 text-primary-foreground"
-              >
-                Adicionar
-              </Button>
-              <Button
-                onClick={() => setShowAddForm(false)}
-                variant="outline"
-                className="flex-1"
-              >
-                Cancelar
-              </Button>
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
+
 
 
 
