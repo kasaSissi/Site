@@ -50,13 +50,21 @@ export default function Navigation() {
           })}
         </div>
 
-        {/* CTA Button */}
-        <Button
-          onClick={() => window.open('https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis.', '_blank')}
-          className="hidden sm:block bg-accent hover:bg-accent/90 text-primary-foreground"
-        >
-          WhatsApp
-        </Button>
+        {/* CTA Button + Gatinho */}
+        <div className="hidden sm:flex items-center gap-3">
+          <img
+            src="/icon-512.png"
+            alt="KASA SISSI"
+            className="h-9 w-9 opacity-70 hover:opacity-100 transition-opacity"
+            title="KASA SISSI"
+          />
+          <Button
+            onClick={() => window.open('https://wa.me/5541984681605?text=Ol%C3%A1%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20m%C3%B3veis.', '_blank')}
+            className="bg-accent hover:bg-accent/90 text-primary-foreground"
+          >
+            WhatsApp
+          </Button>
+        </div>
 
         {/* Mobile Menu Button */}
         <button
