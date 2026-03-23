@@ -26,12 +26,10 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/galeria">
-                <a>
-                  <Button size="lg" className="bg-accent hover:bg-accent/90 text-primary-foreground w-full sm:w-auto">
-                    Explorar Coleção
-                    <ArrowRight className="ml-2" size={20} />
-                  </Button>
-                </a>
+                <Button size="lg" className="bg-accent hover:bg-accent/90 text-primary-foreground w-full sm:w-auto">
+                  Explorar Coleção
+                  <ArrowRight className="ml-2" size={20} />
+                </Button>
               </Link>
               <a
                 href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seu%20design%20de%20convivência."
@@ -123,10 +121,8 @@ export default function Home() {
                   <p className="text-muted-foreground mb-4">
                     Cozinhas, bancadas e móveis que transformam aprendizado em brincadeira.
                   </p>
-                  <Link href="/galeria">
-                    <a className="text-accent hover:text-accent/80 font-semibold flex items-center gap-2">
-                      Ver coleção <ArrowRight size={16} />
-                    </a>
+                  <Link href="/galeria" className="text-accent hover:text-accent/80 font-semibold flex items-center gap-2">
+                    Ver coleção <ArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -144,10 +140,8 @@ export default function Home() {
                   <p className="text-muted-foreground mb-4">
                     Móveis que entendem cães e gatos. Funcionalidade que decora.
                   </p>
-                  <Link href="/galeria">
-                    <a className="text-accent hover:text-accent/80 font-semibold flex items-center gap-2">
-                      Ver coleção <ArrowRight size={16} />
-                    </a>
+                  <Link href="/galeria" className="text-accent hover:text-accent/80 font-semibold flex items-center gap-2">
+                    Ver coleção <ArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -155,12 +149,10 @@ export default function Home() {
 
             <div className="text-center">
               <Link href="/galeria">
-                <a>
-                  <Button size="lg" className="bg-accent hover:bg-accent/90 text-primary-foreground">
-                    Ver Coleção Completa
-                    <ArrowRight className="ml-2" size={20} />
-                  </Button>
-                </a>
+                <Button size="lg" className="bg-accent hover:bg-accent/90 text-primary-foreground">
+                  Ver Coleção Completa
+                  <ArrowRight className="ml-2" size={20} />
+                </Button>
               </Link>
             </div>
           </div>
@@ -198,11 +190,9 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/galeria">
-                <a>
-                  <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10">
-                    Ver Coleção
-                  </Button>
-                </a>
+                <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10">
+                  Ver Coleção
+                </Button>
               </Link>
               <a
                 href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20o%20design%20de%20convivência."
