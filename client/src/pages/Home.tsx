@@ -31,15 +31,14 @@ export default function Home() {
                   <ArrowRight className="ml-2" size={20} />
                 </Button>
               </Link>
-              <a
-                href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seu%20design%20de%20convivência."
-                target="_blank"
-                rel="noopener noreferrer"
+                <Button
+                onClick={() => window.open('https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seu%20design%20de%20convivência.', '_blank')}
+                size="lg"
+                variant="outline"
+                className="border-accent text-accent hover:bg-accent/10 w-full sm:w-auto"
               >
-                <Button size="lg" variant="outline" className="border-accent text-accent hover:bg-accent/10 w-full sm:w-auto">
-                  Conversar
-                </Button>
-              </a>
+                Conversar
+              </Button>
             </div>
           </div>
         </section>
@@ -194,15 +193,13 @@ export default function Home() {
                   Ver Coleção
                 </Button>
               </Link>
-              <a
-                href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20o%20design%20de%20convivência."
-                target="_blank"
-                rel="noopener noreferrer"
+              <Button
+                onClick={() => window.open('https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20o%20design%20de%20convivência.', '_blank')}
+                size="lg"
+                className="bg-primary-foreground text-accent hover:bg-primary-foreground/90"
               >
-                <Button size="lg" className="bg-primary-foreground text-accent hover:bg-primary-foreground/90">
-                  Conversar
-                </Button>
-              </a>
+                Conversar
+              </Button>
             </div>
           </div>
         </section>

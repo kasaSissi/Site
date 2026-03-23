@@ -275,16 +275,14 @@ export default function Gallery() {
             <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">
               Fale conosco pelo WhatsApp e conheça mais detalhes, preços e possibilidades de customização.
             </p>
-            <a
-              href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis."
-              target="_blank"
-              rel="noopener noreferrer"
+            <Button
+              onClick={() => window.open('https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis.', '_blank')}
+              size="lg"
+              className="bg-primary-foreground text-accent hover:bg-primary-foreground/90"
             >
-              <Button size="lg" className="bg-primary-foreground text-accent hover:bg-primary-foreground/90">
-                <MessageCircle className="mr-2" size={20} />
-                Conversar no WhatsApp
-              </Button>
-            </a>
+              <MessageCircle className="mr-2" size={20} />
+              Conversar no WhatsApp
+            </Button>
           </div>
         </section>
       </main>
@@ -377,16 +375,13 @@ export default function Gallery() {
                 className="w-full h-96 object-cover rounded-lg"
               />
               <p className="text-muted-foreground">{selectedProduct.description}</p>
-              <a
-                href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20este%20móvel."
-                target="_blank"
-                rel="noopener noreferrer"
+              <Button
+                onClick={() => window.open('https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20este%20móvel.', '_blank')}
+                className="w-full bg-accent hover:bg-accent/90 text-primary-foreground"
               >
-                <Button className="w-full bg-accent hover:bg-accent/90 text-primary-foreground">
-                  <MessageCircle className="mr-2" size={20} />
-                  Conversar no WhatsApp
-                </Button>
-              </a>
+                <MessageCircle className="mr-2" size={20} />
+                Conversar no WhatsApp
+              </Button>
             </div>
           )}
         </DialogContent>
