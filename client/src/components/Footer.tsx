@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Phone, Instagram } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <h3 className="text-foreground font-display text-xl mb-4">KASA SISSI</h3>
             <p className="text-sm leading-relaxed">
-              Móveis funcionais e estéticos que integram sua casa, seus filhos e seus pets. Qualidade premium em marcenaria.
+              A casa de revista com vida de verdade. Móveis de marcenaria premium para quem não abre mão do estilo.
             </p>
           </div>
 
@@ -35,8 +35,10 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <Mail size={16} />
-                <span>contato@kasasissi.com.br</span>
+                <Instagram size={16} />
+                <a href="https://www.instagram.com/kasa.sissi?igsh=MTlqeTFmcHhkcnk0YQ==" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                  @kasa.sissi
+                </a>
               </li>
             </ul>
           </div>
@@ -58,7 +60,7 @@ export default function Footer() {
 
         {/* Redes Sociais */}
         <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-xs">© 2025 KASA SISSI. Todos os direitos reservados.</p>
+          <p className="text-xs">© 2026 KASA SISSI. Todos os direitos reservados.</p>
           <div className="flex gap-4">
             <a
               href="https://www.instagram.com/kasa.sissi?igsh=MTlqeTFmcHhkcnk0YQ=="

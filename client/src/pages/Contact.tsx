@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { MessageCircle, Instagram, Mail } from 'lucide-react';
+import { MessageCircle, Instagram } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -61,20 +61,22 @@ export default function Contact() {
                 </div>
               </a>
 
-              {/* Email */}
+              {/* Direct Instagram */}
               <a
-                href="mailto:contato@kasasissi.com.br"
+                href="https://www.instagram.com/kasa.sissi?igsh=MTlqeTFmcHhkcnk0YQ=="
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group"
               >
                 <div className="bg-card border border-border rounded-lg p-8 text-center hover:border-accent transition-colors cursor-pointer h-full">
                   <div className="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
-                    <Mail className="text-accent" size={32} />
+                    <Instagram className="text-accent" size={32} />
                   </div>
-                  <h3 className="text-xl font-display mb-2">Email</h3>
+                  <h3 className="text-xl font-display mb-2">Direct Instagram</h3>
                   <p className="text-muted-foreground mb-4">
-                    Envie sua mensagem por email
+                    Mande uma mensagem direto pelo Instagram
                   </p>
-                  <p className="text-accent font-semibold">contato@kasasissi.com.br</p>
+                  <p className="text-accent font-semibold">@kasa.sissi</p>
                 </div>
               </a>
             </div>
