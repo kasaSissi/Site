@@ -27,10 +27,12 @@ export default function NotFound() {
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link href="/">
-            <Button className="bg-accent hover:bg-accent/90 text-primary-foreground px-6 py-2.5 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg">
-              <Home className="w-4 h-4 mr-2" />
-              Voltar ao Início
-            </Button>
+            <a>
+              <Button className="bg-accent hover:bg-accent/90 text-primary-foreground px-6 py-2.5 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg">
+                <Home className="w-4 h-4 mr-2" />
+                Voltar ao Início
+              </Button>
+            </a>
           </Link>
         </div>
       </div>
