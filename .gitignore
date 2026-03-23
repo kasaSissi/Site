@@ -111,3 +111,18 @@ temp/
 
 # Manus version file (auto-generated, not part of source)
 client/public/__manus__/version.json
+# Scripts de desenvolvimento
+fetch_all_images.py
+fetch_all_images2.py
+fetch_new_account.py
+fetch_sdk.py
+generate_products_json.py
+fetch_cloudinary_images.py
+organize_all_images.py
+all_images.json
+all_images_new.json
+image_links.txt
+preview_imgs/
+collages/
+categorize_collages.csv
+categorize_collages.json
