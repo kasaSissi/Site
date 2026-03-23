@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { MessageCircle, Loader2, Trash2, Plus } from 'lucide-react';
+import { fetchCloudinaryImages } from '@/lib/cloudinary';
 
 const CATEGORIES = [
   { id: 'all', label: 'Todos' },
@@ -31,6 +32,7 @@ export default function Gallery() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [products, setProducts] = useState<Product[]>([]);
   const [bancoProducts, setBancoProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
   const [showBanco, setShowBanco] = useState(false);
   const [showAddForm, setShowAddForm] = useState(false);
   const [formData, setFormData] = useState({
@@ -40,6 +42,19 @@ export default function Gallery() {
     image: '',
     isBanco: false
   });
+
+  // Fetch images from Cloudinary on component mount
+  useEffect(() => {
+    const loadImages = async () => {
+      setLoading(true);
+      const { products: fetchedProducts, bancoProducts: fetchedBancoProducts } = await fetchCloudinaryImages();
+      setProducts(fetchedProducts);
+      setBancoProducts(fetchedBancoProducts);
+      setLoading(false);
+    };
+
+    loadImages();
+  }, []);
 
   const addProduct = () => {
     if (!formData.image.trim()) {
@@ -188,7 +203,12 @@ export default function Gallery() {
             </div>
 
             {/* Products Grid */}
-            {showBanco ? (
+            {loading ? (
+              <div className="flex items-center justify-center py-16">
+                <Loader2 className="animate-spin mr-2" size={24} />
+                <p className="text-muted-foreground">Carregando produtos...</p>
+              </div>
+            ) : showBanco ? (
               bancoProducts.length > 0 ? (
                 <>
                   <h2 className="text-2xl font-display mb-8">Galeria de Fotos</h2>
@@ -219,20 +239,28 @@ export default function Gallery() {
             <h2 className="mb-6">Como Adicionar Produtos</h2>
             <ol className="space-y-4 text-muted-foreground">
               <li>
-                <strong>1. Clique em "Adicionar Produto"</strong> acima
+                <strong>1. Faça upload no Cloudinary</strong>
+                <p className="mt-2">Acesse cloudinary.com, vá para Media Library, pasta "Home" e faça upload das suas fotos.</p>
               </li>
               <li>
-                <strong>2. Preencha os dados:</strong>
+                <strong>2. Adicione tags corretas</strong>
                 <ul className="mt-2 ml-4 space-y-2">
-                  <li>• <code className="bg-muted px-2 py-1 rounded">Nome</code> - Nome do móvel</li>
-                  <li>• <code className="bg-muted px-2 py-1 rounded">Categoria</code> - Escolha a categoria</li>
-                  <li>• <code className="bg-muted px-2 py-1 rounded">Descrição</code> - Detalhes do produto</li>
-                  <li>• <code className="bg-muted px-2 py-1 rounded">Link da Imagem</code> - URL do Cloudinary</li>
-                  <li>• <code className="bg-muted px-2 py-1 rounded">Galeria de Fotos</code> - Marque para adicionar ao pool geral</li>
+                  <li>• <code className="bg-muted px-2 py-1 rounded">cozinha</code> - Cozinhas infantis</li>
+                  <li>• <code className="bg-muted px-2 py-1 rounded">bancadas</code> - Bancadas</li>
+                  <li>• <code className="bg-muted px-2 py-1 rounded">pet</code> - Móveis pet</li>
+                  <li>• <code className="bg-muted px-2 py-1 rounded">mesas-infantis</code> - Mesas infantis</li>
+                  <li>• <code className="bg-muted px-2 py-1 rounded">prateleiras</code> - Prateleiras</li>
+                  <li>• <code className="bg-muted px-2 py-1 rounded">outros</code> - Outros móveis</li>
+                  <li>• <code className="bg-muted px-2 py-1 rounded">banco</code> - Galeria de Fotos (pool geral)</li>
                 </ul>
               </li>
               <li>
-                <strong>3. Clique em "Adicionar"</strong> e o produto aparecerá na galeria!
+                <strong>3. As imagens aparecem automaticamente!</strong>
+                <p className="mt-2">Recarregue a página e veja suas imagens organizadas por categoria.</p>
+              </li>
+              <li>
+                <strong>4. Ou adicione manualmente</strong>
+                <p className="mt-2">Clique em "Adicionar Produto" e cole o link da imagem do Cloudinary.</p>
               </li>
             </ol>
           </div>
