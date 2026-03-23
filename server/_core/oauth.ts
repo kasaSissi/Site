@@ -20,14 +20,6 @@ export function registerOAuthRoutes(app: Express) {
     }
 
     try {
-      let returnPath = '/';
-      try {
-        const decodedState = JSON.parse(atob(decodeURIComponent(state)));
-        returnPath = decodedState.returnPath || '/';
-      } catch (e) {
-        // If state is not in new format, use default
-      }
-
       const tokenResponse = await sdk.exchangeCodeForToken(code, state);
       const userInfo = await sdk.getUserInfo(tokenResponse.accessToken);
 
@@ -52,7 +44,7 @@ export function registerOAuthRoutes(app: Express) {
       const cookieOptions = getSessionCookieOptions(req);
       res.cookie(COOKIE_NAME, sessionToken, { ...cookieOptions, maxAge: ONE_YEAR_MS });
 
-      res.redirect(302, returnPath);
+      res.redirect(302, "/");
     } catch (error) {
       console.error("[OAuth] Callback failed", error);
       res.status(500).json({ error: "OAuth callback failed" });
