@@ -2,11 +2,10 @@ import { useState, useEffect } from 'react';
 import { useAuth } from '@/_core/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Trash2, Plus, Edit2, Loader2 } from 'lucide-react';
-import productsData from '@/data/products.json';
+import { Trash2, Plus, Save, Loader2, CheckCircle } from 'lucide-react';
 import { useLocation } from 'wouter';
+import { trpc } from '@/lib/trpc';
 
 const CATEGORIES = [
   { id: 'cozinha', label: 'Cozinhas Infantis' },
@@ -28,100 +27,83 @@ interface Product {
   isBanco?: boolean;
 }
 
+interface CloudinaryImage {
+  public_id: string;
+  secure_url: string;
+  tags?: string[];
+  display_name?: string;
+}
+
 export default function Admin() {
   const { user, loading, isAuthenticated } = useAuth();
   const [, setLocation] = useLocation();
   const [products, setProducts] = useState<Product[]>([]);
   const [bancoProducts, setBancoProducts] = useState<Product[]>([]);
+  const [cloudinaryImages, setCloudinaryImages] = useState<CloudinaryImage[]>([]);
+  const [loadingImages, setLoadingImages] = useState(false);
   const [showForm, setShowForm] = useState(false);
-  const [editingProduct, setEditingProduct] = useState<Product | null>(null);
-  const [formData, setFormData] = useState({
-    name: '',
-    category: 'cozinha',
-    description: '',
-    image: '',
-    isBanco: false
-  });
+  const [selectedImage, setSelectedImage] = useState<CloudinaryImage | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState('cozinha');
+  const [selectedBanco, setSelectedBanco] = useState(false);
+  const [saveStatus, setSaveStatus] = useState('');
+  const [selectedProducts, setSelectedProducts] = useState<Set<string>>(new Set());
 
+  const saveProductsMutation = trpc.products.save.useMutation();
+
+  // Redirecionar se não autenticado
   useEffect(() => {
     if (!loading && !isAuthenticated) {
       setLocation('/');
     }
   }, [loading, isAuthenticated, setLocation]);
 
+  // Carregar imagens do Cloudinary
   useEffect(() => {
+    if (isAuthenticated) {
+      loadCloudinaryImages();
+    }
+  }, [isAuthenticated]);
+
+  const loadCloudinaryImages = async () => {
+    setLoadingImages(true);
     try {
-      setProducts(productsData.products || []);
-      setBancoProducts(productsData.bancoProducts || []);
+      const response = await fetch('https://res.cloudinary.com/dipruvqks/image/list/Sitekasasissi.json');
+      const data = await response.json();
+      setCloudinaryImages(data.resources || []);
     } catch (error) {
-      console.error('Erro ao carregar produtos:', error);
+      console.error('Erro ao carregar imagens:', error);
+      alert('Erro ao carregar imagens do Cloudinary');
+    } finally {
+      setLoadingImages(false);
     }
-  }, []);
+  };
 
-  const handleAddProduct = () => {
-    if (!formData.image.trim()) {
-      alert('Por favor, adicione um link de imagem');
-      return;
-    }
+  const addProductFromImage = () => {
+    if (!selectedImage) return;
 
-    if (editingProduct) {
-      // Editar produto existente
-      if (editingProduct.isBanco) {
-        setBancoProducts(bancoProducts.map(p => 
-          p.id === editingProduct.id 
-            ? { ...p, ...formData }
-            : p
-        ));
-      } else {
-        setProducts(products.map(p => 
-          p.id === editingProduct.id 
-            ? { ...p, ...formData }
-            : p
-        ));
-      }
-      setEditingProduct(null);
+    const newProduct: Product = {
+      id: `product-${Date.now()}`,
+      name: selectedImage.display_name || selectedImage.public_id,
+      category: selectedCategory,
+      description: 'Móvel funcional e elegante para sua casa.',
+      image: selectedImage.secure_url,
+      isBanco: selectedBanco
+    };
+
+    if (selectedBanco) {
+      setBancoProducts([...bancoProducts, newProduct]);
     } else {
-      // Adicionar novo produto
-      const newProduct: Product = {
-        id: `product-${Date.now()}`,
-        name: formData.name || `Produto ${products.length + 1}`,
-        category: formData.category,
-        description: formData.description || 'Móvel funcional e elegante para sua casa.',
-        image: formData.image,
-        isBanco: formData.isBanco
-      };
-
-      if (formData.isBanco) {
-        setBancoProducts([...bancoProducts, newProduct]);
-      } else {
-        setProducts([...products, newProduct]);
-      }
+      setProducts([...products, newProduct]);
     }
 
-    setFormData({
-      name: '',
-      category: 'cozinha',
-      description: '',
-      image: '',
-      isBanco: false
-    });
     setShowForm(false);
+    setSelectedImage(null);
+    setSelectedCategory('cozinha');
+    setSelectedBanco(false);
   };
 
-  const handleEditProduct = (product: Product) => {
-    setEditingProduct(product);
-    setFormData({
-      name: product.name,
-      category: product.category,
-      description: product.description,
-      image: product.image,
-      isBanco: product.isBanco || false
-    });
-    setShowForm(true);
-  };
-
-  const handleDeleteProduct = (id: string, isBanco: boolean) => {
-    if (confirm('Tem certeza que quer deletar?')) {
+  const deleteProduct = (id: string, isBanco: boolean) => {
+    if (confirm('Deletar este produto?')) {
       if (isBanco) {
         setBancoProducts(bancoProducts.filter(p => p.id !== id));
       } else {
@@ -133,8 +115,23 @@ export default function Admin() {
   const setCover = (id: string) => {
     setProducts(products.map(p => ({
       ...p,
-      isCover: p.id === id
+      isCover: p.id === id ? true : false
     })));
+  };
+
+  const saveToDatabase = async () => {
+    setSaveStatus('Salvando...');
+    try {
+      await saveProductsMutation.mutateAsync({
+        products,
+        bancoProducts
+      });
+      setSaveStatus('✅ Salvo com sucesso!');
+      setTimeout(() => setSaveStatus(''), 3000);
+    } catch (error) {
+      console.error('Erro ao salvar:', error);
+      setSaveStatus('❌ Erro ao salvar');
+    }
   };
 
   if (loading) {
@@ -156,38 +153,36 @@ export default function Admin() {
         <div className="flex justify-between items-center mb-8">
           <div>
             <h1 className="text-3xl font-display mb-2">Painel Admin</h1>
-            <p className="text-muted-foreground">Bem-vindo, {user?.name}! Gerencie seus produtos aqui.</p>
+            <p className="text-muted-foreground">Gerencie seus produtos - {products.length + bancoProducts.length} itens</p>
           </div>
-          <Button
-            onClick={() => window.location.href = '/'}
-            variant="outline"
-          >
-            Voltar ao Site
-          </Button>
+          <div className="flex gap-2">
+            {saveStatus && <p className="text-sm">{saveStatus}</p>}
+            <Button
+              onClick={saveToDatabase}
+              disabled={saveProductsMutation.isPending}
+              className="bg-green-600 hover:bg-green-700 text-white"
+            >
+              <Save size={20} className="mr-2" />
+              {saveProductsMutation.isPending ? 'Salvando...' : 'Salvar no Banco'}
+            </Button>
+          </div>
         </div>
 
-        {/* Add Product Button */}
+        {/* Botão Adicionar */}
         <div className="mb-8">
           <Button
             onClick={() => {
-              setEditingProduct(null);
-              setFormData({
-                name: '',
-                category: 'cozinha',
-                description: '',
-                image: '',
-                isBanco: false
-              });
               setShowForm(true);
+              setSelectedImage(null);
             }}
             className="bg-accent hover:bg-accent/90 text-primary-foreground"
           >
             <Plus size={20} className="mr-2" />
-            Adicionar Produto
+            Adicionar Produto do Cloudinary
           </Button>
         </div>
 
-        {/* Products by Category */}
+        {/* Produtos por categoria */}
         <div className="space-y-12">
           {CATEGORIES.map(category => {
             const categoryProducts = products.filter(p => p.category === category.id);
@@ -206,21 +201,14 @@ export default function Admin() {
                           />
                           {product.isCover && (
                             <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                              <span className="text-white font-bold text-lg">CAPA</span>
+                              <CheckCircle className="text-white" size={32} />
                             </div>
                           )}
                         </div>
                         <div className="p-4">
-                          <h3 className="font-semibold mb-2">{product.name}</h3>
+                          <h3 className="font-semibold mb-2 truncate">{product.name}</h3>
                           <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{product.description}</p>
-                          <div className="flex gap-2">
-                            <button
-                              onClick={() => handleEditProduct(product)}
-                              className="flex-1 text-xs px-3 py-2 rounded bg-blue-100 text-blue-700 hover:bg-blue-200 flex items-center justify-center gap-1"
-                            >
-                              <Edit2 size={14} />
-                              Editar
-                            </button>
+                          <div className="flex gap-2 flex-wrap">
                             {!product.isCover && (
                               <button
                                 onClick={() => setCover(product.id)}
@@ -230,7 +218,7 @@ export default function Admin() {
                               </button>
                             )}
                             <button
-                              onClick={() => handleDeleteProduct(product.id, false)}
+                              onClick={() => deleteProduct(product.id, false)}
                               className="text-xs px-3 py-2 rounded bg-red-100 text-red-700 hover:bg-red-200"
                             >
                               <Trash2 size={14} />
@@ -241,7 +229,7 @@ export default function Admin() {
                     ))}
                   </div>
                 ) : (
-                  <p className="text-muted-foreground">Nenhum produto nesta categoria ainda.</p>
+                  <p className="text-muted-foreground">Nenhum produto nesta categoria</p>
                 )}
               </div>
             );
@@ -262,23 +250,14 @@ export default function Admin() {
                       />
                     </div>
                     <div className="p-4">
-                      <h3 className="font-semibold mb-2">{product.name}</h3>
-                      <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{product.description}</p>
-                      <div className="flex gap-2">
-                        <button
-                          onClick={() => handleEditProduct(product)}
-                          className="flex-1 text-xs px-3 py-2 rounded bg-blue-100 text-blue-700 hover:bg-blue-200 flex items-center justify-center gap-1"
-                        >
-                          <Edit2 size={14} />
-                          Editar
-                        </button>
-                        <button
-                          onClick={() => handleDeleteProduct(product.id, true)}
-                          className="text-xs px-3 py-2 rounded bg-red-100 text-red-700 hover:bg-red-200"
-                        >
-                          <Trash2 size={14} />
-                        </button>
-                      </div>
+                      <h3 className="font-semibold mb-2 truncate">{product.name}</h3>
+                      <button
+                        onClick={() => deleteProduct(product.id, true)}
+                        className="w-full text-xs px-3 py-2 rounded bg-red-100 text-red-700 hover:bg-red-200"
+                      >
+                        <Trash2 size={14} className="inline mr-2" />
+                        Deletar
+                      </button>
                     </div>
                   </div>
                 ))}
@@ -288,77 +267,91 @@ export default function Admin() {
         </div>
       </div>
 
-      {/* Add/Edit Product Dialog */}
+      {/* Dialog para selecionar imagem */}
       <Dialog open={showForm} onOpenChange={setShowForm}>
-        <DialogContent className="max-w-md">
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle>{editingProduct ? 'Editar Produto' : 'Adicionar Novo Produto'}</DialogTitle>
+            <DialogTitle>Adicionar Produto do Cloudinary</DialogTitle>
           </DialogHeader>
-          <div className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium mb-2">Nome do Produto</label>
-              <Input
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                placeholder="Ex: Cozinha Infantil Premium"
-              />
+
+          {loadingImages ? (
+            <div className="flex items-center justify-center py-8">
+              <Loader2 className="animate-spin mr-2" size={24} />
+              <p>Carregando imagens...</p>
             </div>
-            <div>
-              <label className="block text-sm font-medium mb-2">Categoria</label>
-              <select
-                value={formData.category}
-                onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                className="w-full px-3 py-2 border border-border rounded-lg"
-              >
-                {CATEGORIES.map(cat => (
-                  <option key={cat.id} value={cat.id}>{cat.label}</option>
-                ))}
-              </select>
+          ) : (
+            <div className="space-y-4">
+              {/* Seleção de categoria */}
+              <div>
+                <label className="block text-sm font-medium mb-2">Categoria</label>
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full px-3 py-2 border border-border rounded-lg"
+                >
+                  {CATEGORIES.map(cat => (
+                    <option key={cat.id} value={cat.id}>{cat.label}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Checkbox Galeria */}
+              <div className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  id="isBanco"
+                  checked={selectedBanco}
+                  onChange={(e) => setSelectedBanco(e.target.checked)}
+                  className="rounded"
+                />
+                <label htmlFor="isBanco" className="text-sm font-medium">
+                  Adicionar à Galeria de Fotos
+                </label>
+              </div>
+
+              {/* Grid de imagens */}
+              <div>
+                <label className="block text-sm font-medium mb-2">Selecione uma imagem:</label>
+                <div className="grid grid-cols-3 gap-4 max-h-[400px] overflow-y-auto">
+                  {cloudinaryImages.map(img => (
+                    <div
+                      key={img.public_id}
+                      onClick={() => setSelectedImage(img)}
+                      className={`cursor-pointer rounded-lg overflow-hidden border-2 transition-all ${
+                        selectedImage?.public_id === img.public_id
+                          ? 'border-accent'
+                          : 'border-transparent hover:border-muted'
+                      }`}
+                    >
+                      <img
+                        src={img.secure_url}
+                        alt={img.display_name}
+                        className="w-full h-24 object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Botões */}
+              <div className="flex gap-2 pt-4">
+                <Button
+                  onClick={addProductFromImage}
+                  disabled={!selectedImage}
+                  className="flex-1 bg-accent hover:bg-accent/90 text-primary-foreground disabled:opacity-50"
+                >
+                  Adicionar
+                </Button>
+                <Button
+                  onClick={() => setShowForm(false)}
+                  variant="outline"
+                  className="flex-1"
+                >
+                  Cancelar
+                </Button>
+              </div>
             </div>
-            <div>
-              <label className="block text-sm font-medium mb-2">Descrição</label>
-              <Textarea
-                value={formData.description}
-                onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                placeholder="Descreva o móvel..."
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-2">Link da Imagem (Cloudinary)</label>
-              <Input
-                value={formData.image}
-                onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-                placeholder="https://res.cloudinary.com/..."
-              />
-            </div>
-            <div className="flex items-center gap-2">
-              <input
-                type="checkbox"
-                id="isBanco"
-                checked={formData.isBanco}
-                onChange={(e) => setFormData({ ...formData, isBanco: e.target.checked })}
-                className="rounded"
-              />
-              <label htmlFor="isBanco" className="text-sm font-medium">
-                Adicionar à Galeria de Fotos
-              </label>
-            </div>
-            <div className="flex gap-2 pt-4">
-              <Button
-                onClick={handleAddProduct}
-                className="flex-1 bg-accent hover:bg-accent/90 text-primary-foreground"
-              >
-                {editingProduct ? 'Atualizar' : 'Adicionar'}
-              </Button>
-              <Button
-                onClick={() => setShowForm(false)}
-                variant="outline"
-                className="flex-1"
-              >
-                Cancelar
-              </Button>
-            </div>
-          </div>
+          )}
         </DialogContent>
       </Dialog>
     </div>
