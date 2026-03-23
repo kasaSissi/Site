@@ -4,141 +4,168 @@
       "id": "produto-1",
       "name": "Cozinha Infantil Rosa",
       "category": "cozinha",
-      "description": "Cozinha Infantil Premium em MDF. Espaço perfeito para crianças brincarem e aprender.",
-      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20251206_224454_hvwr3r.jpg"
+      "description": "Cozinha Infantil Premium em MDF. Espaço perfeito para crianças brincarem e aprender a cozinhar.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_182747-COLLAGE_2_ry0poh.jpg"
     },
     {
       "id": "produto-2",
       "name": "Cozinha Infantil Branca",
       "category": "cozinha",
       "description": "Cozinha Infantil Completa com acabamento impecável. Funcional e decorativa.",
-      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_182747-COLLAGE_2_ry0poh.jpg"
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_182747-COLLAGE_gofssm.jpg"
     },
     {
       "id": "produto-3",
       "name": "Cozinha Infantil Completa",
       "category": "cozinha",
       "description": "Cozinha Infantil Moderna. Design integrado à sua casa.",
-      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_182747-COLLAGE_gofssm.jpg"
-    },
-    {
-      "id": "produto-4",
-      "name": "Bancada Criativa",
-      "category": "bancadas",
-      "description": "Bancada de Marcenaria Infantil. Perfeita para criar e explorar.",
       "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_182821-COLLAGE_lf5ua8.jpg"
     },
     {
-      "id": "produto-5",
-      "name": "Bancada de Marcenaria",
-      "category": "bancadas",
-      "description": "Bancada Funcional em MDF Premium. Espaço criativo para crianças.",
+      "id": "produto-4",
+      "name": "Cozinha Infantil Moderna",
+      "category": "cozinha",
+      "description": "Cozinha Infantil Elegante. Qualidade premium para crianças de 4 a 10 anos.",
       "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_182917-COLLAGE_lmj8u1.jpg"
     },
     {
-      "id": "produto-6",
-      "name": "Bancada Premium",
-      "category": "bancadas",
-      "description": "Bancada de Trabalho Infantil. Design elegante e funcional.",
-      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_183024-COLLAGE_vqjehx.jpg"
+      "id": "produto-5",
+      "name": "Cozinha Infantil Elegante",
+      "category": "cozinha",
+      "description": "Cozinha Infantil Funcional. Móvel que cresce com a criança.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_183024-COLLAGE_vqjehx.jpg",
+      "isCover": true
     },
     {
-      "id": "produto-7",
-      "name": "Nicho Pet Elegante",
-      "category": "pet",
-      "description": "Móvel Pet Elegante. Integra seu cão ou gato à decoração.",
+      "id": "produto-6",
+      "name": "Cozinha Infantil Versátil",
+      "category": "cozinha",
+      "description": "Cozinha Infantil Versátil. Espaço para brincar e aprender.",
       "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_183108-COLLAGE_ne8msx.jpg"
     },
     {
-      "id": "produto-8",
-      "name": "Móvel Pet Moderno",
-      "category": "pet",
-      "description": "Nicho Pet Moderno. Espaço confortável e decorativo.",
+      "id": "produto-7",
+      "name": "Bancada Criativa",
+      "category": "bancadas",
+      "description": "Bancada de Marcenaria Infantil. Espaço para criar e explorar.",
       "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_183220-COLLAGE_ry3xzh.jpg"
     },
     {
-      "id": "produto-9",
-      "name": "Nicho Pet Funcional",
-      "category": "pet",
-      "description": "Móvel Pet Funcional. Beleza que acomoda.",
-      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_183331-COLLAGE_rwjlhe.jpg"
+      "id": "produto-8",
+      "name": "Bancada de Marcenaria",
+      "category": "bancadas",
+      "description": "Bancada Funcional em MDF Premium. Espaço criativo para crianças.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_183331-COLLAGE_rwjlhe.jpg",
+      "isCover": true
     },
     {
-      "id": "produto-10",
-      "name": "Mesa Infantil Versátil",
-      "category": "mesas-infantis",
-      "description": "Mesa Infantil Versátil. Espaço para estudar, desenhar e brincar.",
+      "id": "produto-9",
+      "name": "Bancada Premium",
+      "category": "bancadas",
+      "description": "Bancada de Trabalho Infantil. Design elegante e funcional.",
       "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_183435-COLLAGE_gadxcj.jpg"
     },
     {
-      "id": "produto-11",
-      "name": "Mesa de Estudos",
-      "category": "mesas-infantis",
-      "description": "Mesa Infantil Funcional. Design que cresce com a criança.",
+      "id": "produto-10",
+      "name": "Nicho Pet Elegante",
+      "category": "pet",
+      "description": "Móvel Pet Elegante. Integra seu cão ou gato à decoração.",
       "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_183520-COLLAGE_qz0k9b.jpg"
     },
     {
-      "id": "produto-12",
-      "name": "Mesa Infantil Premium",
-      "category": "mesas-infantis",
-      "description": "Mesa Infantil Premium. Qualidade e estilo.",
+      "id": "produto-11",
+      "name": "Móvel Pet Moderno",
+      "category": "pet",
+      "description": "Nicho Pet Moderno. Espaço confortável e decorativo.",
       "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_183556-COLLAGE_wk3l7x.jpg"
     },
     {
-      "id": "produto-13",
-      "name": "Prateleira Decorativa",
-      "category": "prateleiras",
-      "description": "Prateleira Decorativa. Organiza e embeleza seu espaço.",
-      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_183648-COLLAGE_s4hx2c.jpg"
+      "id": "produto-12",
+      "name": "Nicho Pet Funcional",
+      "category": "pet",
+      "description": "Móvel Pet Funcional. Beleza que acomoda.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_183648-COLLAGE_s4hx2c.jpg",
+      "isCover": true
     },
     {
-      "id": "produto-14",
-      "name": "Prateleira Funcional",
-      "category": "prateleiras",
-      "description": "Prateleira Funcional em MDF. Armazenamento com estilo.",
+      "id": "produto-13",
+      "name": "Nicho Pet Premium",
+      "category": "pet",
+      "description": "Nicho Pet Premium. Dog living integrado à sua casa.",
       "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_183735-COLLAGE_bjij0m.jpg"
     },
     {
-      "id": "produto-15",
-      "name": "Prateleira Premium",
-      "category": "prateleiras",
-      "description": "Prateleira Elegante. Integra-se perfeitamente à sua casa.",
+      "id": "produto-14",
+      "name": "Mesa Infantil Versátil",
+      "category": "mesas-infantis",
+      "description": "Mesa Infantil Versátil. Espaço para estudar, desenhar e brincar.",
       "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_183812-COLLAGE_m8v4hh.jpg"
     },
     {
-      "id": "produto-16",
-      "name": "Móvel Integrado",
-      "category": "outros",
-      "description": "Móvel Funcional KASA SISSI. Casa para quem vive de verdade.",
-      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_183859-COLLAGE_1_vbqkwe.jpg"
-    },
-    {
-      "id": "produto-17",
-      "name": "Peça Decorativa",
-      "category": "outros",
-      "description": "Peça Decorativa e Funcional. Integra toda a família.",
+      "id": "produto-15",
+      "name": "Mesa de Estudos",
+      "category": "mesas-infantis",
+      "description": "Mesa Infantil Funcional. Design que cresce com a criança.",
       "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_183859-COLLAGE_jz9zxs.jpg"
     },
     {
-      "id": "produto-18",
-      "name": "Móvel Funcional",
-      "category": "outros",
-      "description": "Móvel Premium. Design pensado para a vida real.",
+      "id": "produto-16",
+      "name": "Mesa Infantil Premium",
+      "category": "mesas-infantis",
+      "description": "Mesa Infantil Premium. Qualidade e estilo.",
       "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_183940-COLLAGE_gh1zpx.jpg"
     },
     {
+      "id": "produto-17",
+      "name": "Conjunto Mesa e Cadeiras",
+      "category": "mesas-infantis",
+      "description": "Conjunto Mesa e Cadeiras. Perfeito para a infância integrada.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_184019-COLLAGE_9dyxkp.jpg",
+      "isCover": true
+    },
+    {
+      "id": "produto-18",
+      "name": "Prateleira Decorativa",
+      "category": "prateleiras",
+      "description": "Prateleira Decorativa. Organiza e embeleza seu espaço.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_184104-COLLAGE_0hklrb.jpg"
+    },
+    {
       "id": "produto-19",
-      "name": "Móvel Integrado",
-      "category": "outros",
-      "description": "Móvel Funcional KASA SISSI. Casa para quem vive de verdade.",
-      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_184019-COLLAGE_9dyxkp.jpg"
+      "name": "Prateleira Funcional",
+      "category": "prateleiras",
+      "description": "Prateleira Funcional em MDF. Armazenamento com estilo.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_184357-COLLAGE_eltjbg.jpg"
     },
     {
       "id": "produto-20",
-      "name": "Peça Decorativa",
-      "category": "outros",
-      "description": "Peça Decorativa e Funcional. Integra toda a família.",
-      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_184104-COLLAGE_0hklrb.jpg"
+      "name": "Prateleira Elegante",
+      "category": "prateleiras",
+      "description": "Prateleira Elegante. Integra-se perfeitamente à sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_184456-COLLAGE_ynuswk.jpg",
+      "isCover": true
+    },
+    {
+      "id": "produto-21",
+      "name": "Prateleira Premium",
+      "category": "prateleiras",
+      "description": "Prateleira Premium. Design que organiza e decora.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_184526-COLLAGE_strfvx.jpg"
+    },
+    {
+      "id": "produto-22",
+      "name": "Móvel de Cabeceira",
+      "category": "cabeceira",
+      "description": "Móvel de Cabeceira Infantil. Funcional e elegante.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_184559-COLLAGE_lzoy28.jpg"
+    },
+    {
+      "id": "produto-23",
+      "name": "Cabeceira Premium",
+      "category": "cabeceira",
+      "description": "Cabeceira Premium. Design pensado para o quarto infantil.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/20260322_184630-COLLAGE_w2n9mb.jpg",
+      "isCover": true
     }
   ],
   "bancoProducts": []
