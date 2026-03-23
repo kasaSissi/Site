@@ -1,8 +1,7 @@
 import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
-import { publicProcedure, router, protectedProcedure } from "./_core/trpc";
-import { z } from "zod";
+import { publicProcedure, router } from "./_core/trpc";
 
 export const appRouter = router({
   system: systemRouter,
@@ -15,30 +14,6 @@ export const appRouter = router({
         success: true,
       } as const;
     }),
-  }),
-
-  products: router({
-    getAll: publicProcedure.query(async () => {
-      try {
-        const response = await fetch('https://res.cloudinary.com/dipruvqks/image/list/Sitekasasissi.json');
-        if (!response.ok) return { products: [], bancoProducts: [] };
-        const data = await response.json();
-        return data;
-      } catch (error) {
-        console.error('Erro ao carregar produtos:', error);
-        return { products: [], bancoProducts: [] };
-      }
-    }),
-    
-    save: protectedProcedure
-      .input(z.object({
-        products: z.array(z.any()),
-        bancoProducts: z.array(z.any())
-      }))
-      .mutation(async ({ input }) => {
-        console.log('Salvando produtos:', input);
-        return { success: true };
-      })
   }),
 });
 

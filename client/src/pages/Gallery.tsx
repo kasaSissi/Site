@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { MessageCircle, Loader2 } from 'lucide-react';
@@ -25,64 +23,58 @@ interface Product {
   category: string;
   description: string;
   image: string;
-  isCover?: boolean;
-  isBanco?: boolean;
 }
 
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [products, setProducts] = useState<Product[]>([]);
-  const [bancoProducts, setBancoProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
-  const [showBanco, setShowBanco] = useState(false);
 
-
-  // Load products from JSON file
   useEffect(() => {
     setLoading(true);
     try {
-      setProducts(productsData.products || []);
-      setBancoProducts(productsData.bancoProducts || []);
+      // Combina produtos e bancoProducts em uma lista única
+      const all = [
+        ...(productsData.products || []),
+        ...(productsData.bancoProducts || []),
+      ];
+      setProducts(all);
     } catch (error) {
       console.error('Erro ao carregar produtos:', error);
       setProducts([]);
-      setBancoProducts([]);
     } finally {
       setLoading(false);
     }
   }, []);
 
-
-
-  const filteredProducts = selectedCategory === 'all' 
-    ? products 
+  const filteredProducts = selectedCategory === 'all'
+    ? products
     : products.filter(p => p.category === selectedCategory);
 
   const renderProductGrid = (items: Product[]) => (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {items.map(product => (
-        <div key={product.id} className="group">
-          <div className="relative overflow-hidden rounded-lg mb-4 bg-muted h-64 flex items-center justify-center">
+        <div key={product.id} className="group cursor-pointer" onClick={() => setSelectedProduct(product)}>
+          <div className="relative overflow-hidden rounded-lg mb-4 bg-muted h-64">
             {product.image ? (
               <img
                 src={product.image}
                 alt={product.name}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
               />
             ) : (
-              <p className="text-muted-foreground">Imagem não carregada</p>
+              <div className="w-full h-full flex items-center justify-center">
+                <p className="text-muted-foreground text-sm">Imagem indisponível</p>
+              </div>
             )}
-
           </div>
-          <h3 className="text-lg font-display mb-2">{product.name}</h3>
-          <p className="text-muted-foreground text-sm mb-4">{product.description}</p>
-          <button
-            onClick={() => setSelectedProduct(product)}
-            className="text-accent hover:text-accent/80 font-semibold text-sm"
-          >
-            Ver detalhes
-          </button>
+          <h3 className="text-lg font-display mb-1">{product.name}</h3>
+          <p className="text-muted-foreground text-sm mb-3 line-clamp-2">{product.description}</p>
+          <span className="text-accent hover:text-accent/80 font-semibold text-sm">
+            Ver detalhes →
+          </span>
         </div>
       ))}
     </div>
@@ -107,19 +99,15 @@ export default function Gallery() {
         <section className="py-16">
           <div className="container">
 
-
             {/* Category Filter */}
             <div className="mb-12">
               <div className="flex flex-wrap gap-3">
                 {CATEGORIES.map(category => (
                   <button
                     key={category.id}
-                    onClick={() => {
-                      setShowBanco(false);
-                      setSelectedCategory(category.id);
-                    }}
+                    onClick={() => setSelectedCategory(category.id)}
                     className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                      selectedCategory === category.id && !showBanco
+                      selectedCategory === category.id
                         ? 'bg-accent text-primary-foreground'
                         : 'bg-muted text-foreground hover:bg-muted/80'
                     }`}
@@ -127,21 +115,6 @@ export default function Gallery() {
                     {category.label}
                   </button>
                 ))}
-                {bancoProducts.length > 0 && (
-                  <button
-                    onClick={() => {
-                      setShowBanco(true);
-                      setSelectedCategory('all');
-                    }}
-                    className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                      showBanco
-                        ? 'bg-accent text-primary-foreground'
-                        : 'bg-muted text-foreground hover:bg-muted/80'
-                    }`}
-                  >
-                    Galeria de Fotos
-                  </button>
-                )}
               </div>
             </div>
 
@@ -151,19 +124,6 @@ export default function Gallery() {
                 <Loader2 className="animate-spin mr-2" size={24} />
                 <p className="text-muted-foreground">Carregando produtos...</p>
               </div>
-            ) : showBanco ? (
-              bancoProducts.length > 0 ? (
-                <>
-                  <h2 className="text-2xl font-display mb-8">Galeria de Fotos</h2>
-                  {renderProductGrid(bancoProducts)}
-                </>
-              ) : (
-                <div className="text-center py-16">
-                  <p className="text-muted-foreground text-lg">
-                    Nenhuma imagem de inspiração disponível ainda.
-                  </p>
-                </div>
-              )
             ) : filteredProducts.length > 0 ? (
               renderProductGrid(filteredProducts)
             ) : (
@@ -195,10 +155,6 @@ export default function Gallery() {
         </section>
       </main>
 
-
-
-
-
       {/* Product Detail Dialog */}
       <Dialog open={!!selectedProduct} onOpenChange={() => setSelectedProduct(null)}>
         <DialogContent className="max-w-2xl">
@@ -214,18 +170,11 @@ export default function Gallery() {
                   className="w-full h-96 object-cover rounded-lg"
                 />
                 <div>
-                  <h3 className="font-semibold mb-2">Descrição</h3>
                   <p className="text-muted-foreground">{selectedProduct.description}</p>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <p className="text-sm text-muted-foreground">Categoria</p>
-                    <p className="font-semibold">{CATEGORIES.find(c => c.id === selectedProduct.category)?.label}</p>
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">ID</p>
-                    <p className="font-semibold text-xs">{selectedProduct.id}</p>
-                  </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">Categoria</p>
+                  <p className="font-semibold">{CATEGORIES.find(c => c.id === selectedProduct.category)?.label ?? 'Outros'}</p>
                 </div>
                 <Button
                   onClick={() => window.open('https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20' + encodeURIComponent(selectedProduct.name), '_blank')}

@@ -1,4 +1,1139 @@
 {
-  "products": [],
+  "products": [
+    {
+      "id": "80f6463a-9ff4-463c-9eb8-eb7504d97cf6",
+      "name": "Cama para Gatos Moderna",
+      "category": "pet",
+      "description": "Cama moderna para gatos, com design elegante e confortável.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_190018-COLLAGE_epwuuk.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "39c64fd7-5d1a-4244-b280-90d0fab06999",
+      "name": "Prateleira de Entrada com Ganchos",
+      "category": "prateleiras",
+      "description": "Prateleira de parede com ganchos e duas superfícies para organização de chaves e itens.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_185208-COLLAGE_wfuym2.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "08a960c0-1f53-4375-bdb4-5f7d13b15bb7",
+      "name": "Mesa Infantil Simples",
+      "category": "mesas-infantis",
+      "description": "Mesa infantil simples e compacta, ideal para atividades e brincadeiras.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_184128-COLLAGE_vahhnw.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "6c4f9b8f-2e8e-477f-a24e-014a62ec086f",
+      "name": "Bancada de Atividades Infantil com Pegboard",
+      "category": "bancadas",
+      "description": "Bancada infantil com pegboard e gavetas, ideal para atividades e organização.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_184002-COLLAGE_grvviq.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "453b9515-1a9b-436c-9603-5c9b65f39333",
+      "name": "Cozinha Infantil Completa",
+      "category": "cozinha",
+      "description": "Cozinha de brinquedo com pia, fogão, forno e micro-ondas. Diversão garantida!",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_183435-COLLAGE_q5vlho.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "ba02c32e-af75-4986-b78a-c1efc8fbe222",
+      "name": "Conjunto Mesa e Cadeira Infantil",
+      "category": "mesas-infantis",
+      "description": "Conjunto de mesa e cadeira infantil com design moderno e pernas de madeira.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_182917-COLLAGE_yygdrb.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "5bd7eb47-d826-48e7-a40f-a7c56ae724c4",
+      "name": "Mesa de Cabeceira Minimalista",
+      "category": "outros",
+      "description": "Mesa de cabeceira com design moderno e espaço para livros e objetos decorativos.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_190233-COLLAGE_kmndrm.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "f8f456fc-f0d5-4257-b22e-b591bf6abd48",
+      "name": "Cozinha Infantil Completa com Pia e Fogão",
+      "category": "cozinha",
+      "description": "Cozinha de brinquedo com pia, fogão e forno. Perfeita para pequenos chefs.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_185646-COLLAGE_jp7s5f.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "33909156-4a34-4162-b937-895792ca463d",
+      "name": "Nicho para Gatos Estilo TV",
+      "category": "pet",
+      "description": "Nicho moderno para gatos com design de TV, ideal para descanso e diversão.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_190107-COLLAGE_lxcrvf.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "c4b3cc5b-4247-4c58-96aa-08fb98727b19",
+      "name": "Cama para Gato Moderna",
+      "category": "pet",
+      "description": "Cama para gato com design moderno, ideal para o descanso do seu pet.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_185938-COLLAGE_kz0o8f.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "245dd05c-d658-4a0a-9d3b-66078f63f4a2",
+      "name": "Bancada de Atividades Infantil com Pegboard",
+      "category": "bancadas",
+      "description": "Bancada infantil com pegboard, gavetas e rolo de papel. Ideal para atividades.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_185711-COLLAGE_bkavc2.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "c0eb7f50-c251-4fde-b180-ff757b9427e1",
+      "name": "Nicho Hexagonal para Gatos",
+      "category": "pet",
+      "description": "Nicho de madeira hexagonal com almofada, ideal para o descanso do seu gato.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_185837-COLLAGE_t5ygt9.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "130a560e-0453-4dc6-af05-c1dff485e432",
+      "name": "Cozinha Infantil Completa Rosa e Cinza",
+      "category": "cozinha",
+      "description": "Cozinha infantil completa com pia, fogão e forno. Perfeita para pequenos chefs.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_185608-COLLAGE_ul6cyh.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "8c8b6c61-836f-47f5-b9a9-1eafb78b9a99",
+      "name": "Nicho Gato Elegante com Patinhas",
+      "category": "pet",
+      "description": "Nicho moderno e confortável para gatos, com detalhes de patinhas.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_185430-COLLAGE_vjd3jq.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "bda2ddf2-3bb6-409c-81c4-fc873e1dec72",
+      "name": "Prateleira Organizadora de Parede",
+      "category": "prateleiras",
+      "description": "Prateleira com design moderno e ganchos, ideal para organizar chaves e acessórios.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_185319-COLLAGE_apckpl.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "155999d3-ed1e-4838-be5b-76e2b8a96a78",
+      "name": "Prateleira de Parede Decorativa",
+      "category": "prateleiras",
+      "description": "Prateleira de parede com design moderno e três níveis para organização e decoração.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_185240-COLLAGE_fuisxm.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "c2547d67-8ab5-4184-964b-890111b24748",
+      "name": "Nicho para Pet com Osso Vazado",
+      "category": "pet",
+      "description": "Nicho moderno para pets com entrada em formato de osso. Conforto e estilo para seu amigo.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_185052-COLLAGE_x6ybsm.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "e046fc09-54d8-42eb-88f9-711434090758",
+      "name": "Cama Pet Moderna para Gatos",
+      "category": "pet",
+      "description": "Cama elegante e confortável para gatos, com design moderno e almofada macia.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_185122-COLLAGE_hkrjdc.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "2210e8ff-43b7-4623-a202-9bd98e2e499d",
+      "name": "Nicho Hexagonal para Gatos",
+      "category": "pet",
+      "description": "Nicho hexagonal moderno para gatos, com aberturas circulares. Conforto e design.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_184907-COLLAGE_u2w5dv.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "320f163d-f573-493a-9fe4-c5bd96d5a734",
+      "name": "Mesa de Cabeceira Minimalista",
+      "category": "outros",
+      "description": "Mesa de cabeceira com design minimalista, ideal para quartos modernos.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_184956-COLLAGE_myvxhb.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "7150fa01-adfb-482a-8958-a8463d0c9c0f",
+      "name": "Conjunto Mesa e Cadeiras Infantis",
+      "category": "mesas-infantis",
+      "description": "Conjunto de mesa e cadeiras simples, ideal para atividades e refeições infantis.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_184740-COLLAGE_nnhbdp.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "197ca15a-6f06-4f8a-a386-80c0e6253b19",
+      "name": "Nicho para Gato Estilo TV",
+      "category": "pet",
+      "description": "Nicho moderno para gatos com design de TV, ideal para descanso e diversão.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_184630-COLLAGE_d0yc3s.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "b4db1cda-d17a-412f-8dfb-8847f3a71e1d",
+      "name": "Nicho Gato Estilo TV",
+      "category": "pet",
+      "description": "Nicho para gatos com design de TV retrô, ideal para descanso e diversão.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_184559-COLLAGE_bjtwsl.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "f5ae5bab-3169-4c7e-9755-5a2a932994d8",
+      "name": "Nicho para Gatos Moderno",
+      "category": "pet",
+      "description": "Nichos e casinhas para gatos com design moderno e furos redondos.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_184456-COLLAGE_xjg6jn.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "7df024cf-c741-4d91-b70f-b8ea2d5c1e42",
+      "name": "Nicho para Gatos TV Retrô",
+      "category": "pet",
+      "description": "Nicho para gatos em formato de TV retrô, com almofada macia. Conforto e estilo.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_184526-COLLAGE_ahyitq.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "d80b46d3-463a-4200-99fc-e94c9ba60b19",
+      "name": "Nicho Gato Hexagonal com Almofada",
+      "category": "pet",
+      "description": "Nicho hexagonal para gatos com almofada. Conforto e estilo para seu pet.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_184357-COLLAGE_axcmcs.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "95722170-c09c-4798-a9e3-18d2ea1c5502",
+      "name": "Nicho Hexagonal para Gatos",
+      "category": "pet",
+      "description": "Nicho hexagonal moderno para gatos, com aberturas laterais e design elegante.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_184310-COLLAGE_vypx6k.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "89d532e9-7122-4282-8c49-f0b63feefe54",
+      "name": "Cozinha Infantil Completa",
+      "category": "cozinha",
+      "description": "Cozinha de brinquedo com pia, fogão, forno e micro-ondas. Perfeita para crianças.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_184222-COLLAGE_ocobmi.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "75a3f48a-bd70-4d17-9d31-22ecdd0c509d",
+      "name": "Cozinha Infantil Completa",
+      "category": "cozinha",
+      "description": "Cozinha de brinquedo com pia, fogão, micro-ondas e forno. Perfeita para brincar!",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_184200-COLLAGE_oaa9rm.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "fbb76da0-c68f-4053-8c24-1f7233e63f47",
+      "name": "Mesa Infantil Simples",
+      "category": "mesas-infantis",
+      "description": "Mesa baixa para atividades infantis, ideal para desenhar e brincar.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_184115-COLLAGE_t8g0ay.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "67f6f71e-87a3-4ece-a34f-021f166a7005",
+      "name": "Mesa Infantil de Atividades",
+      "category": "mesas-infantis",
+      "description": "Mesa infantil de madeira com pernas inclinadas, ideal para atividades.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_184052-COLLAGE_hs39xb.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "50c43afe-34ee-49ce-b925-ebba78226a0d",
+      "name": "Conjunto Mesa e Cadeira Infantil",
+      "category": "mesas-infantis",
+      "description": "Conjunto de mesa e cadeira infantil, ideal para atividades e estudos.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_184033-COLLAGE_lmkvov.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "9b5ab674-de06-4c82-9318-83f39c3cf036",
+      "name": "Nicho Hexagonal para Gatos",
+      "category": "pet",
+      "description": "Nicho moderno e confortável para gatos, com design hexagonal e almofada macia.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_183331-COLLAGE_e5fylj.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "5debb468-7681-4515-850f-95552c664e5e",
+      "name": "Nicho Hexagonal para Gatos",
+      "category": "pet",
+      "description": "Nicho moderno e confortável para gatos, com design hexagonal e aberturas laterais.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_183220-COLLAGE_qzxbjx.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "ddaf2fa8-f3be-410c-a0d2-df066edf4d42",
+      "name": "Nicho Gato Design Moderno",
+      "category": "pet",
+      "description": "Nicho para gatos com design moderno e confortável. Ideal para descanso.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_183108-COLLAGE_dvs82p.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "30518435-7dd4-488a-918a-bdb19f274dfe",
+      "name": "Bancada de Atividades Infantil com Pegboard",
+      "category": "bancadas",
+      "description": "Bancada infantil com pegboard, gaveta e rolo de papel. Ideal para atividades criativas.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_183024-COLLAGE_2_gcrgcu.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "bf45dad2-044e-4074-8afd-aca68e13e8df",
+      "name": "Bancada de Atividades Infantil com Pegboard",
+      "category": "bancadas",
+      "description": "Bancada com pegboard, gaveta e rolo de papel. Perfeita para atividades infantis.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_183024-COLLAGE_wntdlr.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "667bda46-929b-43be-a04e-b953fbe6dab2",
+      "name": "Bancada de Atividades Infantil com Pegboard",
+      "category": "bancadas",
+      "description": "Bancada infantil com pegboard, gavetas e rolo de papel. Ideal para atividades.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_182747-COLLAGE_2_ifcfzs.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "d70d08f8-4b27-4bd3-bb11-168998c7cd4b",
+      "name": "Bancada de Atividades Infantil com Pegboard",
+      "category": "bancadas",
+      "description": "Bancada infantil com pegboard, gavetas e rolete de papel. Ideal para atividades criativas.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_182821-COLLAGE_nr0mc7.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "86f3044d-2a01-478b-99d3-ad7c58b5588c",
+      "name": "Bancada de Atividades Infantil com Pegboard",
+      "category": "bancadas",
+      "description": "Bancada infantil com pegboard, gavetas e rolo de papel. Ideal para atividades criativas.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/20260322_182747-COLLAGE_rf9zby.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "81eeaebe-1e87-4e41-a8b3-6764db8a9847",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162918_Mercado_Libre_l6zhqv_musaxq.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "43f9fb89-ee67-4e6e-b4f5-119bc19c335a",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162906_Mercado_Libre_tfjzgv_ovyj5x.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "e67b0316-061d-4a9b-b9d4-0a9e89984a9f",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162913_Mercado_Libre_bn2sje_ytltqg.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "5986beb2-b09d-4517-aae1-78dbec54de1a",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162859_Mercado_Libre_srs5xn_l4hn0m.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "6ac92207-61d2-4bec-89bc-f1d4ddfe29e3",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162844_Mercado_Libre_b71ahh_shx4ns.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "8ea02b71-0570-469d-b796-d6fc29a688b4",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162814_Mercado_Libre_fuifau_rzwioz.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "47b669a9-cf3d-419c-93f1-2c569293e39e",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162829_Mercado_Libre_xdqcwy_xhiax6.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "964aae06-c0e5-4ebd-81b0-7592402b727d",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162826_Mercado_Libre_zimieh_xf256b.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "24d0ed99-bdb8-4b82-b99a-dbc23c66fe95",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162820_Mercado_Libre_n3c0pv_q25lku.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "2b20bda7-2927-445a-a1e5-1c581b8bfd7f",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162741_Mercado_Libre_i9a0on_gwoshn.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "ff9e671b-3995-4932-abec-6858a8fb3a59",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162727_Mercado_Libre_p2spqy_wa9o5g.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "b9ace8a6-1a29-4c48-b159-6ff731fc52ca",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162724_Mercado_Libre_x6fc9x_aferw6.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "e2c1d89c-722e-4ba1-b601-8b7b2a257fa4",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162720_Mercado_Libre_o2h40u_gocpq2.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "93b13417-0284-4ad7-9b9e-de758d60b8ee",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162650_Mercado_Libre_htihfm_wojmia.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "60649840-6eec-4674-b4a3-c71b0e69a852",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162716_Mercado_Libre_wvysz7_htffiq.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "48682503-b710-4746-956c-8b4b6b8a254e",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162713_Mercado_Libre_a10kz9_yzmjoj.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "c550a17f-7605-4c81-829e-eefb6f6bbee9",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162708_Mercado_Libre_dg30hw_tnbnt6.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "0bde9ba9-8177-43f7-962e-f2c2ebb681ef",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162655_Mercado_Libre_pidibl_d5hqfc.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "593a8f5b-20e9-4228-b87c-a69ffb2fd0b3",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162620_Mercado_Libre_ia6rau_qhikjt.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "a803f8cb-06ee-442e-ac21-43c0ea33916c",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162646_Mercado_Libre_wd7stn_qlnru9.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "6cc4157c-8d1b-4ba1-b791-be0b58b8d608",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162642_Mercado_Libre_s23x52_ya0v5l.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "21148809-ce5c-4d49-b2cd-6539289dccdd",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162615_Mercado_Libre_qf6kjq_pkxllv.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "4f2c2af7-4ae5-4bf6-8b40-c1427124a468",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162612_Mercado_Libre_nwjvs5_smhhvd.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "e079db0f-388a-496d-9d4a-d3a6c3b5ce0c",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162608_Mercado_Libre_mpwgpi_jmv9e5.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "5f6c33ae-6579-405f-9b0c-bbf1d6174b42",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162605_Mercado_Libre_ujy0hu_jvnsek.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "9d9d751a-7689-4424-b4b9-2e3376820767",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162512_Mercado_Libre_gagy2m_oxzmio.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "b0b09c11-8e0a-4909-a0fb-3f61ff5a7e90",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162508_Mercado_Libre_dux11c_iyyucn.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "8e0883f8-d5ef-4a84-abf4-451e3011379f",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162459_Mercado_Libre_lfxvyg_mvwjpz.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "d1cc570e-f406-480e-b301-3a3f75bc7a36",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162504_Mercado_Libre_vvdvlr_mvsc3q.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "ea611c8b-724a-402d-b680-c07347439def",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162453_Mercado_Libre_gseqeb_jpvyfs.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "3a2cc51e-b6d0-4ba9-84cf-aee972970699",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162448_Mercado_Libre_fsaymv_kraz1v.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "0b1a5c99-1c1e-4e30-9da1-8a7c22be96d2",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162433_Mercado_Libre_k0ndgr_qtccze.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "9d083780-2b98-4e1a-9ad6-26aac25e7196",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162437_Mercado_Libre_q0kviy_dfza9f.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "66c7570c-ddf1-4b02-871b-e8a47e22d25b",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162417_Mercado_Libre_otojhg_yaiuk8.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "ee51b29b-52cb-4ecd-ad5d-d6c2dcc203e8",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162355_Mercado_Libre_c8sxee_mmxyu1.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "9b23ea3e-ad7a-4a76-a19c-31d2764e92fb",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162352_Mercado_Libre_f0xj9c_olqsvr.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "308bdc22-ff60-4ccf-9ffa-2e50b38036a8",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172548_Mercado_Libre_bc7bg4_xmie7o.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "fc023e2e-855b-4c4e-86d8-f942380a07eb",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172520_Mercado_Libre_af6atl_fsdtor.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "f92e1b8e-4f7f-467b-8970-4a4f76f0a432",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172517_Mercado_Libre_co6lmf_bfzuck.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "df0dac6b-f38b-431d-b14f-f3e42cf9f8ba",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163320_Mercado_Libre_mqgykn_bsyljy.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "d75e497d-9c92-49b6-81bd-56390b909dd9",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172515_Mercado_Libre_uo1hui_ymlsso.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "56a8c8c7-9e93-4c07-b443-548078855b9e",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163316_Mercado_Libre_mxo0ef_harqn2.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "60ff02ac-6b74-44ef-903d-1ed1469515a1",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163305_Mercado_Libre_necgr2_nfelxa.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "652068fd-0628-45f2-9d2b-a26034546fe2",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163313_Mercado_Libre_gmvpdy_mrlzti.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "272859f3-1973-40c0-8351-4cb3ab79299e",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163257_Mercado_Libre_bn253h_k3xbqq.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "98c05244-4987-4224-aa02-a5b00f41a0c8",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163254_Mercado_Libre_yvfgy6_hkewrs.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "7d73ca42-c545-42ea-b229-6d6682be580e",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163205_Mercado_Libre_aejwdo_ybrkes.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "43f89cbe-b1b3-4eaa-9ed9-b7397c7f163d",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163157_Mercado_Libre_qtp02e_cxmzlp.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "00cef98b-03cb-4485-b141-1bd0d0c8abc9",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163201_Mercado_Libre_k3paf1_yxl35b.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "fc91c87b-6fe6-46b4-a31e-19f8758cf679",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163153_Mercado_Libre_pjlqpj_evu1cf.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "8f616c41-9279-43ce-9c71-e7053ff8f38b",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163140_Mercado_Libre_baj3su_rf425u.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "378bf3e3-87ce-48de-bcea-61f23f28ba16",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163136_Mercado_Libre_ouqimz_sfdhbx.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "99c124ec-519e-4bd1-85e4-d5c30c874257",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163132_Mercado_Libre_zrvrik_bpuxup.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "14a97670-ff2f-45bd-a423-c94033dc1fed",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163128_Mercado_Libre_aw0vdj_cxklyi.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "d92bcbe8-022b-4586-94df-0b2163320f00",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163111_Mercado_Libre_b8wlow_ixzu3c.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "ffd774ab-ac32-489e-88a7-b759f35cab8d",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163124_Mercado_Libre_a8jtct_qaei59.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "7c5a87ee-62f1-47f6-a7e6-22bc37fd05e7",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163105_Mercado_Libre_brvoq2_i5aclt.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "0e86d6df-39f5-4f42-98b7-e3787c9326e3",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163059_Mercado_Libre_wzhqur_sesdhl.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "feb22743-3f62-4b0f-bdbe-df46cdabb585",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163039_Mercado_Libre_l77e8q_vydkjp.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "42fc5e4a-6a3b-412e-9b80-cbb3ee488aae",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163048_Mercado_Libre_cgbhyx_bhdwsl.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "c473112a-2c51-4b48-8502-ba2835165baa",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163044_Mercado_Libre_xuz7fc_b8xeec.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "c45b3244-7f6a-4e1f-8ef5-0672f1f996e4",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163028_Mercado_Libre_v10npd_smixq6.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "a1e74d17-5830-47e1-a1bb-dce02b7f121b",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163011_Mercado_Libre_cxu2tg_ojyuzs.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "57180b65-cf81-478d-9d5b-882c5d8da16e",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163007_Mercado_Libre_bkmibq_tkhllo.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "fc799f47-7ed3-445f-bc11-0dc35c61a8d2",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_163003_Mercado_Libre_yf0lkq_dam2ej.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "f701e43c-a3c6-4af0-bd84-6cd959836b98",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162959_Mercado_Libre_tvskfx_icekz4.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "b5f11a40-5569-45a0-a364-c42c386d1bee",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162955_Mercado_Libre_lnpsv5_r8gggh.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "afbd7604-e60b-4c8a-8c3c-d0522661d650",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162926_Mercado_Libre_dernfr_yhpo9i.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "fc695a8a-fdf5-4a84-b01b-04bc9f6cd0ce",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_162922_Mercado_Libre_jlsu1l_dz2lif.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "fd0a7ab5-1eaa-448e-b1ce-79dffc095397",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172715_Mercado_Libre_x3kt4k_zcfyky.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "fd29218e-f3e1-4055-8f49-817c52f5e8ea",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172720_Mercado_Libre_wofcez_kddoqr.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "c2e44fdd-cec4-48af-a6ed-adc71c004e2a",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172711_Mercado_Libre_zd6blu_ljdnik.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "7638e46d-ee90-49d2-b7b8-232181cd30b0",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172703_Mercado_Libre_banuou_utjooy.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "7eb2367c-a7da-40ce-8b5c-d6c9b0101dc4",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172659_Mercado_Libre_xn68fb_fqar0c.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "03add7f9-f963-4a6a-b9e7-4ee1b0850ae1",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172655_Mercado_Libre_ci8e80_fea2c9.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "ddb7b73d-3471-4308-a07f-56639cf34806",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172647_Mercado_Libre_mzdy3x_nqwklm.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "b973ab29-cd2a-425e-856a-1d3f3f64aaaf",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172641_Mercado_Libre_rxczhq_epzbzc.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "26ab691f-8f2b-4386-a93a-1aa23fd63a55",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172611_Mercado_Libre_w4cn3n_zl7fhj.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "0d84c8e8-9f05-432f-8724-8eb1946a1c0b",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172618_Mercado_Libre_wi9wtm_mjfgx8.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "0f66b545-72c9-46d6-903a-e58438d48288",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172628_Mercado_Libre_aynbba_oqsyvw.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "fd69dcfa-cb1e-4fd5-9a94-18e6232b6ce3",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172615_Mercado_Libre_nxnrcj_oi0pff.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "19f3b4eb-43aa-40a5-8adb-3f362dc87e76",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172607_Mercado_Libre_tnc16v_m6wx4y.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "7a0645e0-bef1-407f-8ed3-6b322558399e",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172555_Mercado_Libre_wtdpxq_fxtcrz.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "58d66c04-2276-4177-a573-ebf798d7eb0d",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172551_Mercado_Libre_inpzd7_bsibfo.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "42bc065b-be64-42ff-9a03-7b805c91f7a0",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172625_Mercado_Libre_k1aewq_ceepnz.jpg",
+      "isCover": false,
+      "isBanco": false
+    },
+    {
+      "id": "a14f77ec-31f5-4bef-9303-8b54c9bd5215",
+      "name": "Produto KASA SISSI",
+      "category": "outros",
+      "description": "Móvel artesanal KASA SISSI. Qualidade premium em madeira natural.",
+      "image": "https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/Screenshot_20260322_172621_Mercado_Libre_wxlmju_asodmh.jpg",
+      "isCover": false,
+      "isBanco": false
+    }
+  ],
   "bancoProducts": []
 }

@@ -46,7 +46,7 @@ export default function Footer() {
         <div className="border-t border-border pt-8 pb-8">
           <div className="flex items-center gap-4 mb-3">
             <img
-              src="https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/IMG-20250611-WA0031_boh0vh"
+              src="https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/chiko_kiare_parceria.jpg"
               alt="Chiko i Kiare"
               className="h-8 w-auto"
             />
@@ -58,7 +58,7 @@ export default function Footer() {
 
         {/* Redes Sociais */}
         <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-xs">© 2024 KASA SISSI. Todos os direitos reservados.</p>
+          <p className="text-xs">© 2025 KASA SISSI. Todos os direitos reservados.</p>
           <div className="flex gap-4">
             <a
               href="https://www.instagram.com/kasa.sissi?igsh=MTlqeTFmcHhkcnk0YQ=="

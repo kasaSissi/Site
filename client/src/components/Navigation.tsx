@@ -11,7 +11,6 @@ export default function Navigation() {
     { href: '/galeria', label: 'Galeria' },
     { href: '/sobre', label: 'Sobre' },
     { href: '/contato', label: 'Contato' },
-    { href: '/area-logada', label: 'Área Logada' },
     { href: 'https://www.mercadolivre.com.br/pagina/kasa_sissi?utm_source=ig&utm_medium=social&utm_content=link_in_bio', label: 'Mercado Livre', external: true }
   ];
 
@@ -21,7 +20,7 @@ export default function Navigation() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
           <img
-            src="https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/IMG-20251214-WA0000_nv3uib"
+            src="https://res.cloudinary.com/dp9rcls07/image/upload/f_auto,q_auto/kasasissi_logo.jpg"
             alt="KASA SISSI"
             className="h-10 w-auto"
           />
