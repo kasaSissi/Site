@@ -51,16 +51,12 @@ export default function Navigation() {
         </div>
 
         {/* CTA Button */}
-        <a
-          href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden sm:block"
+        <Button
+          onClick={() => window.open('https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis.', '_blank')}
+          className="hidden sm:block bg-accent hover:bg-accent/90 text-primary-foreground"
         >
-          <Button className="bg-accent hover:bg-accent/90 text-primary-foreground">
-            WhatsApp
-          </Button>
-        </a>
+          WhatsApp
+        </Button>
 
         {/* Mobile Menu Button */}
         <button
@@ -97,15 +93,12 @@ export default function Navigation() {
                 </Link>
               );
             })}
-            <a
-              href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis."
-              target="_blank"
-              rel="noopener noreferrer"
+            <Button
+              onClick={() => window.open('https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis.', '_blank')}
+              className="w-full bg-accent hover:bg-accent/90 text-primary-foreground"
             >
-              <Button className="w-full bg-accent hover:bg-accent/90 text-primary-foreground">
-                WhatsApp
-              </Button>
-            </a>
+              WhatsApp
+            </Button>
           </div>
         </div>
       )}
