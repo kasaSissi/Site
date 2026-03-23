@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { MessageCircle, Loader2, Trash2, Plus } from 'lucide-react';
+import { MessageCircle, Loader2, Trash2, Plus, Settings } from 'lucide-react';
 import productsData from '@/data/products.json';
 
 const CATEGORIES = [
@@ -15,6 +15,7 @@ const CATEGORIES = [
   { id: 'pet', label: 'Móveis Pet' },
   { id: 'mesas-infantis', label: 'Mesas Infantis' },
   { id: 'prateleiras', label: 'Prateleiras' },
+  { id: 'cabeceira', label: 'Cabeceiras' },
   { id: 'outros', label: 'Outros' }
 ];
 
@@ -24,6 +25,7 @@ interface Product {
   category: string;
   description: string;
   image: string;
+  isCover?: boolean;
   isBanco?: boolean;
 }
 
@@ -35,6 +37,7 @@ export default function Gallery() {
   const [loading, setLoading] = useState(true);
   const [showBanco, setShowBanco] = useState(false);
   const [showAddForm, setShowAddForm] = useState(false);
+  const [showAdminPanel, setShowAdminPanel] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     category: 'cozinha',
@@ -91,11 +94,20 @@ export default function Gallery() {
   };
 
   const deleteProduct = (id: string, isBanco: boolean) => {
-    if (isBanco) {
-      setBancoProducts(bancoProducts.filter(p => p.id !== id));
-    } else {
-      setProducts(products.filter(p => p.id !== id));
+    if (confirm('Tem certeza que quer deletar?')) {
+      if (isBanco) {
+        setBancoProducts(bancoProducts.filter(p => p.id !== id));
+      } else {
+        setProducts(products.filter(p => p.id !== id));
+      }
     }
+  };
+
+  const setCover = (id: string) => {
+    setProducts(products.map(p => ({
+      ...p,
+      isCover: p.id === id
+    })));
   };
 
   const filteredProducts = selectedCategory === 'all' 
@@ -116,16 +128,33 @@ export default function Gallery() {
             ) : (
               <p className="text-muted-foreground">Imagem não carregada</p>
             )}
+            {product.isCover && (
+              <div className="absolute top-2 right-2 bg-accent text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                Capa
+              </div>
+            )}
           </div>
           <h3 className="text-lg font-display mb-2">{product.name}</h3>
           <p className="text-muted-foreground text-sm mb-4">{product.description}</p>
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap">
             <button
               onClick={() => setSelectedProduct(product)}
               className="flex-1 text-accent hover:text-accent/80 font-semibold text-sm"
             >
               Ver detalhes
             </button>
+            {!product.isBanco && (
+              <button
+                onClick={() => setCover(product.id)}
+                className={`text-xs px-2 py-1 rounded ${
+                  product.isCover 
+                    ? 'bg-accent text-primary-foreground' 
+                    : 'bg-muted text-foreground hover:bg-muted/80'
+                }`}
+              >
+                {product.isCover ? '✓ Capa' : 'Marcar Capa'}
+              </button>
+            )}
             <button
               onClick={() => deleteProduct(product.id, product.isBanco || false)}
               className="text-destructive hover:text-destructive/80"
@@ -146,10 +175,22 @@ export default function Gallery() {
         {/* Hero Section */}
         <section className="py-16 bg-secondary/20">
           <div className="container">
-            <h1 className="mb-4">Galeria de Móveis</h1>
-            <p className="text-muted-foreground text-lg max-w-2xl">
-              Explore nossa coleção de móveis funcionais e elegantes, pensados para integrar sua família e seus pets.
-            </p>
+            <div className="flex justify-between items-start">
+              <div>
+                <h1 className="mb-4">Galeria de Móveis</h1>
+                <p className="text-muted-foreground text-lg max-w-2xl">
+                  Explore nossa coleção de móveis funcionais e elegantes, pensados para integrar sua família e seus pets.
+                </p>
+              </div>
+              <Button
+                onClick={() => setShowAdminPanel(true)}
+                variant="outline"
+                size="sm"
+              >
+                <Settings size={18} className="mr-2" />
+                Admin
+              </Button>
+            </div>
           </div>
         </section>
 
@@ -232,39 +273,6 @@ export default function Gallery() {
                 </p>
               </div>
             )}
-          </div>
-        </section>
-
-        {/* Upload Info Section */}
-        <section className="py-16 bg-secondary/20">
-          <div className="container max-w-2xl">
-            <h2 className="mb-6">Como Adicionar Produtos</h2>
-            <ol className="space-y-4 text-muted-foreground">
-              <li>
-                <strong>1. Faça upload no Cloudinary</strong>
-                <p className="mt-2">Acesse cloudinary.com, vá para Media Library, pasta "Home" e faça upload das suas fotos.</p>
-              </li>
-              <li>
-                <strong>2. Adicione tags corretas</strong>
-                <ul className="mt-2 ml-4 space-y-2">
-                  <li>• <code className="bg-muted px-2 py-1 rounded">cozinha</code> - Cozinhas infantis</li>
-                  <li>• <code className="bg-muted px-2 py-1 rounded">bancadas</code> - Bancadas</li>
-                  <li>• <code className="bg-muted px-2 py-1 rounded">pet</code> - Móveis pet</li>
-                  <li>• <code className="bg-muted px-2 py-1 rounded">mesas-infantis</code> - Mesas infantis</li>
-                  <li>• <code className="bg-muted px-2 py-1 rounded">prateleiras</code> - Prateleiras</li>
-                  <li>• <code className="bg-muted px-2 py-1 rounded">outros</code> - Outros móveis</li>
-                  <li>• <code className="bg-muted px-2 py-1 rounded">banco</code> - Galeria de Fotos (pool geral)</li>
-                </ul>
-              </li>
-              <li>
-                <strong>3. As imagens aparecem automaticamente!</strong>
-                <p className="mt-2">Recarregue a página e veja suas imagens organizadas por categoria.</p>
-              </li>
-              <li>
-                <strong>4. Ou adicione manualmente</strong>
-                <p className="mt-2">Clique em "Adicionar Produto" e cole o link da imagem do Cloudinary.</p>
-              </li>
-            </ol>
           </div>
         </section>
 
@@ -361,28 +369,137 @@ export default function Gallery() {
         </DialogContent>
       </Dialog>
 
+      {/* Admin Panel Dialog */}
+      <Dialog open={showAdminPanel} onOpenChange={setShowAdminPanel}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>Painel Admin - Gerenciar Produtos</DialogTitle>
+          </DialogHeader>
+          
+          <div className="space-y-8">
+            {/* Produtos por Categoria */}
+            {CATEGORIES.filter(c => c.id !== 'all').map(category => {
+              const categoryProducts = products.filter(p => p.category === category.id);
+              return (
+                <div key={category.id} className="border-b pb-6">
+                  <h3 className="text-lg font-semibold mb-4">{category.label} ({categoryProducts.length})</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    {categoryProducts.map(product => (
+                      <div key={product.id} className="relative group">
+                        <div className="relative overflow-hidden rounded-lg bg-muted h-40">
+                          <img
+                            src={product.image}
+                            alt={product.name}
+                            className="w-full h-full object-cover"
+                          />
+                          {product.isCover && (
+                            <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                              <span className="text-white font-bold">CAPA</span>
+                            </div>
+                          )}
+                        </div>
+                        <p className="text-xs mt-2 truncate font-medium">{product.name}</p>
+                        <div className="flex gap-1 mt-2">
+                          <button
+                            onClick={() => setCover(product.id)}
+                            className={`flex-1 text-xs px-2 py-1 rounded ${
+                              product.isCover 
+                                ? 'bg-accent text-primary-foreground' 
+                                : 'bg-muted hover:bg-muted/80'
+                            }`}
+                          >
+                            {product.isCover ? '✓' : 'Capa'}
+                          </button>
+                          <button
+                            onClick={() => deleteProduct(product.id, false)}
+                            className="text-xs px-2 py-1 rounded bg-destructive/10 text-destructive hover:bg-destructive/20"
+                          >
+                            Del
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+
+            {/* Galeria de Fotos */}
+            {bancoProducts.length > 0 && (
+              <div className="border-b pb-6">
+                <h3 className="text-lg font-semibold mb-4">Galeria de Fotos ({bancoProducts.length})</h3>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  {bancoProducts.map(product => (
+                    <div key={product.id} className="relative group">
+                      <div className="relative overflow-hidden rounded-lg bg-muted h-40">
+                        <img
+                          src={product.image}
+                          alt={product.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <p className="text-xs mt-2 truncate font-medium">{product.name}</p>
+                      <button
+                        onClick={() => deleteProduct(product.id, true)}
+                        className="w-full text-xs px-2 py-1 rounded bg-destructive/10 text-destructive hover:bg-destructive/20 mt-2"
+                      >
+                        Deletar
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          <div className="flex gap-2 pt-4">
+            <Button
+              onClick={() => setShowAdminPanel(false)}
+              className="flex-1 bg-accent hover:bg-accent/90 text-primary-foreground"
+            >
+              Fechar
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
       {/* Product Detail Dialog */}
       <Dialog open={!!selectedProduct} onOpenChange={() => setSelectedProduct(null)}>
         <DialogContent className="max-w-2xl">
-          <DialogHeader>
-            <DialogTitle>{selectedProduct?.name}</DialogTitle>
-          </DialogHeader>
           {selectedProduct && (
-            <div className="space-y-4">
-              <img
-                src={selectedProduct.image}
-                alt={selectedProduct.name}
-                className="w-full h-96 object-cover rounded-lg"
-              />
-              <p className="text-muted-foreground">{selectedProduct.description}</p>
-              <Button
-                onClick={() => window.open('https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20este%20móvel.', '_blank')}
-                className="w-full bg-accent hover:bg-accent/90 text-primary-foreground"
-              >
-                <MessageCircle className="mr-2" size={20} />
-                Conversar no WhatsApp
-              </Button>
-            </div>
+            <>
+              <DialogHeader>
+                <DialogTitle>{selectedProduct.name}</DialogTitle>
+              </DialogHeader>
+              <div className="space-y-4">
+                <img
+                  src={selectedProduct.image}
+                  alt={selectedProduct.name}
+                  className="w-full h-96 object-cover rounded-lg"
+                />
+                <div>
+                  <h3 className="font-semibold mb-2">Descrição</h3>
+                  <p className="text-muted-foreground">{selectedProduct.description}</p>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <p className="text-sm text-muted-foreground">Categoria</p>
+                    <p className="font-semibold">{CATEGORIES.find(c => c.id === selectedProduct.category)?.label}</p>
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">ID</p>
+                    <p className="font-semibold text-xs">{selectedProduct.id}</p>
+                  </div>
+                </div>
+                <Button
+                  onClick={() => window.open('https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20' + encodeURIComponent(selectedProduct.name), '_blank')}
+                  className="w-full bg-accent hover:bg-accent/90 text-primary-foreground"
+                >
+                  <MessageCircle className="mr-2" size={20} />
+                  Conversar no WhatsApp
+                </Button>
+              </div>
+            </>
           )}
         </DialogContent>
       </Dialog>
