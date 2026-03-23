@@ -11,6 +11,7 @@ export default function Navigation() {
     { href: '/galeria', label: 'Galeria' },
     { href: '/sobre', label: 'Sobre' },
     { href: '/contato', label: 'Contato' },
+    { href: '/area-logada', label: 'Área Logada' },
     { href: 'https://www.mercadolivre.com.br/pagina/kasa_sissi?utm_source=ig&utm_medium=social&utm_content=link_in_bio', label: 'Mercado Livre', external: true }
   ];
 

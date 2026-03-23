@@ -9,6 +9,7 @@ import Gallery from "./pages/Gallery";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
+import AreaLogada from "./pages/AreaLogada";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -19,6 +20,7 @@ function Router() {
       <Route path={"/sobre"} component={About} />
       <Route path={"/contato"} component={Contact} />
       <Route path={"/admin"} component={Admin} />
+      <Route path={"/area-logada"} component={AreaLogada} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
