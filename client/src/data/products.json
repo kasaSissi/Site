@@ -1,27 +1,177 @@
 {
   "products": [
     {
-      "id": "cozinha-1",
-      "name": "Cozinha Infantil Premium",
-      "category": "cozinha",
-      "description": "Cozinha infantil em MDF premium com acabamento impecável. Perfeita para crianças de 4 a 10 anos.",
-      "image": "https://res.cloudinary.com/7abf63b8135fcdce3499e218d6d578/image/upload/v1/Home/seu-arquivo-aqui"
+      "id": "produto-1",
+      "name": "Produto 1",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_184357-COLLAGE_eltjbg.jpg"
     },
     {
-      "id": "pet-1",
-      "name": "Nicho Pet Elegante",
-      "category": "pet",
-      "description": "Nicho para cães e gatos que decora enquanto funciona. Design integrado à sua casa.",
-      "image": "https://res.cloudinary.com/7abf63b8135fcdce3499e218d6d578/image/upload/v1/Home/seu-arquivo-aqui"
+      "id": "produto-2",
+      "name": "Produto 2",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_184456-COLLAGE_ynuswk.jpg"
+    },
+    {
+      "id": "produto-3",
+      "name": "Produto 3",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_184526-COLLAGE_strfvx.jpg"
+    },
+    {
+      "id": "produto-4",
+      "name": "Produto 4",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_184559-COLLAGE_lzoy28.jpg"
+    },
+    {
+      "id": "produto-5",
+      "name": "Produto 5",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_184630-COLLAGE_w2n9mb.jpg"
+    },
+    {
+      "id": "produto-6",
+      "name": "Produto 6",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_184740-COLLAGE_lii8wq.jpg"
+    },
+    {
+      "id": "produto-7",
+      "name": "Produto 7",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_184907-COLLAGE_qe0zfr.jpg"
+    },
+    {
+      "id": "produto-8",
+      "name": "Produto 8",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_184956-COLLAGE_t9ylod.jpg"
+    },
+    {
+      "id": "produto-9",
+      "name": "Produto 9",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_185052-COLLAGE_ntk7uf.jpg"
+    },
+    {
+      "id": "produto-10",
+      "name": "Produto 10",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_185122-COLLAGE_lz4zen.jpg"
+    },
+    {
+      "id": "produto-11",
+      "name": "Produto 11",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_185208-COLLAGE_tlsdhc.jpg"
+    },
+    {
+      "id": "produto-12",
+      "name": "Produto 12",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_185240-COLLAGE_x6cqm1.jpg"
+    },
+    {
+      "id": "produto-13",
+      "name": "Produto 13",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_185319-COLLAGE_kkmnjr.jpg"
+    },
+    {
+      "id": "produto-14",
+      "name": "Produto 14",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_185430-COLLAGE_wxxg8j.jpg"
+    },
+    {
+      "id": "produto-15",
+      "name": "Produto 15",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_185608-COLLAGE_gxcev8.jpg"
+    },
+    {
+      "id": "produto-16",
+      "name": "Produto 16",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_185646-COLLAGE_ylpody.jpg"
+    },
+    {
+      "id": "produto-17",
+      "name": "Produto 17",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_185711-COLLAGE_moolwa.jpg"
+    },
+    {
+      "id": "produto-18",
+      "name": "Produto 18",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_185837-COLLAGE_k95lrn.jpg"
+    },
+    {
+      "id": "produto-19",
+      "name": "Produto 19",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_185938-COLLAGE_jph8tb.jpg"
+    },
+    {
+      "id": "produto-20",
+      "name": "Produto 20",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_190018-COLLAGE_nzrxay.jpg"
     }
   ],
   "bancoProducts": [
     {
-      "id": "banco-1",
-      "name": "Inspiração 1",
+      "id": "produto-21",
+      "name": "Produto 21",
       "category": "outros",
-      "description": "Ambiente integrado com móveis KASA SISSI.",
-      "image": "https://res.cloudinary.com/7abf63b8135fcdce3499e218d6d578/image/upload/v1/Home/seu-arquivo-aqui",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_190107-COLLAGE_ogntyv.jpg",
+      "isBanco": true
+    },
+    {
+      "id": "produto-22",
+      "name": "Produto 22",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/20260322_190233-COLLAGE_s8ygrq.jpg",
+      "isBanco": true
+    },
+    {
+      "id": "produto-23",
+      "name": "Produto 23",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/IMG-20250611-WA0031_boh0vh.jpg",
+      "isBanco": true
+    },
+    {
+      "id": "produto-24",
+      "name": "Produto 24",
+      "category": "outros",
+      "description": "Móvel funcional e elegante para sua casa.",
+      "image": "https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/IMG-20251214-WA0000_nv3uib.jpg",
       "isBanco": true
     }
   ]
