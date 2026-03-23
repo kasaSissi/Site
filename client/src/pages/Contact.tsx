@@ -137,9 +137,9 @@ export default function Contact() {
         {/* Final CTA */}
         <section className="py-20 bg-accent text-primary-foreground">
           <div className="container text-center">
-            <h2 className="text-primary-foreground mb-6">Não encontrou sua resposta?</h2>
+            <h2 className="text-primary-foreground mb-6 text-3xl font-display">Vamos transformar o seu espaço?</h2>
             <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">
-              Estamos aqui para ajudar! Fale conosco via WhatsApp ou qualquer um de nossos canais.
+              Nossa equipe está pronta para ajudar você a escolher as melhores peças para integrar sua família com elegância.
             </p>
             <a
               href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Tenho%20uma%20dúvida."

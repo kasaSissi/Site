@@ -26,15 +26,15 @@ export default function About() {
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="mb-6">Nossa Missão</h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  A KASA SISSI acredita que um lar bonito não precisa ser perfeito. É sobre criar espaços funcionais, estéticos e aconchegantes onde a vida realmente acontece.
+                <h2 className="mb-6 text-3xl font-display">Nossa Missão</h2>
+                <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
+                  A KASA SISSI nasceu da crença de que um lar não precisa perder a elegância para ser funcional. Criamos espaços onde o <strong>design de convivência</strong> permite que a vida real aconteça sem conflitos estéticos.
                 </p>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Nossos móveis são projetados para famílias reais: com crianças brincando, pets descansando e momentos preciosos sendo vividos. Cada peça é cuidadosamente criada para integrar-se perfeitamente ao seu espaço.
+                <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
+                  Nossos móveis de marcenaria premium são projetados para famílias contemporâneas. Através de soluções inteligentes de <strong>gatificação estética</strong>, <strong>dog living</strong> e <strong>móveis infantis montessorianos</strong>, garantimos que crianças brinquem e pets descansem em harmonia com a decoração da sua casa.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Qualidade premium, funcionalidade impecável e estética que inspira. Isso é KASA SISSI.
+                <p className="text-muted-foreground leading-relaxed text-lg font-medium">
+                  Em parceria com a fábrica <em>Chiko i Kiare</em>, entregamos qualidade premium, acabamento impecável e madeira natural. Isso é KASA SISSI.
                 </p>
               </div>
               <img
@@ -89,12 +89,12 @@ export default function About() {
             <h2 className="text-center mb-16">Por que escolher KASA SISSI?</h2>
             <div className="max-w-3xl mx-auto space-y-6">
               {[
-                'Móveis de marcenaria com qualidade premium e acabamento impecável',
-                'Design pensado para integrar humanos, crianças e pets em harmonia',
-                'Funcionalidade que melhora sua vida diária',
-                'Estética minimalista que se adapta a qualquer ambiente',
-                'Atendimento personalizado e consultoria de design',
-                'Opções de customização para suas necessidades específicas'
+                'Marcenaria de alto padrão com qualidade premium e acabamento impecável',
+                'Design de convivência: integra humanos, crianças e pets sem perder a elegância',
+                'Gatificação estética e soluções inteligentes de dog living',
+                'Móveis infantis que acompanham o desenvolvimento e decoram o ambiente',
+                'Estética minimalista e nórdica que se adapta a projetos arquitetônicos contemporâneos',
+                'Produção em parceria com a excelência fabril da Chiko i Kiare'
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-4">
                   <Check className="text-accent flex-shrink-0 mt-1" size={20} />
@@ -108,9 +108,9 @@ export default function About() {
         {/* CTA */}
         <section className="py-20 bg-accent text-primary-foreground">
           <div className="container text-center">
-            <h2 className="text-primary-foreground mb-6">Pronto para começar?</h2>
+            <h2 className="text-primary-foreground mb-6 text-3xl font-display">Pronto para transformar sua convivência?</h2>
             <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">
-              Fale conosco e descubra como podemos transformar seu espaço em um lugar ainda mais especial.
+              Explore nossa coleção e descubra as melhores peças para integrar sua família com design e funcionalidade.
             </p>
             <a
               href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis."

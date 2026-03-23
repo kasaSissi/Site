@@ -18,11 +18,12 @@ export default function Home() {
             <div className="mb-6">
               <span className="text-accent font-semibold text-sm tracking-widest uppercase">Design de Convivência</span>
             </div>
-            <h1 className="text-foreground mb-6 leading-tight">
-              Casa de revista na vida real
+            <h1 className="text-foreground mb-6 leading-tight text-4xl md:text-6xl">
+              Móveis Premium para Integrar Crianças e Pets
             </h1>
+            <h2 className="text-2xl md:text-3xl font-display text-foreground/90 mb-4">A casa de revista na vida real</h2>
             <p className="text-muted-foreground text-xl mb-8 leading-relaxed max-w-2xl">
-              Aquela casa linda que você vê em revista, mas que REALMENTE funciona. Com pets integrados, crianças brincando, tudo no lugar, tudo bonito. Sem conflitos, sem bagunça, sem culpa.
+              Aquela casa linda que você vê em revista, mas que REALMENTE funciona. Móveis de marcenaria funcional para gatificação, dog living e desenvolvimento infantil. Tudo no lugar, tudo bonito. Sem conflitos, sem bagunça, sem culpa.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/galeria">
@@ -161,19 +162,19 @@ export default function Home() {
         <section className="py-20 bg-background">
           <div className="container">
             <div className="max-w-3xl">
-              <h2 className="mb-8">Casa de Revista na Vida Real</h2>
+              <h2 className="mb-8 text-3xl font-display">Design de Convivência: O Fim do Conflito Estético</h2>
               <div className="space-y-6">
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  KASA SISSI não faz móveis "para pet" ou "para criança". Faz móveis para aquela casa linda que você vê em revista, mas que REALMENTE funciona.
+                  A KASA SISSI não faz apenas móveis "para pet" ou "para criança". Nós criamos soluções de marcenaria premium para famílias que não abrem mão da elegância.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  Onde seu cão descansa em um nicho elegante. Seu gato explora prateleiras que decoram. Sua criança brinca sem bagunça. Você trabalha em paz. Tudo no lugar. Tudo bonito.
+                  Imagine uma sala onde seu cão descansa em um nicho que parece uma obra de arte. Onde a <strong>gatificação</strong> acontece através de prateleiras que complementam a sua decoração. Onde a <strong>bancada de marcenaria infantil</strong> ou a cozinha de brincar da sua filha se integram à paleta de cores da casa.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  Sem conflitos entre beleza e funcionalidade. Sem culpa de "sujar" a casa. Sem parecer petshop ou brinquedoteca. Só uma casa que flui naturalmente.
+                  Você pode trabalhar em paz, enquanto as crianças brincam e os pets relaxam. Sem a casa parecer um petshop ou uma brinquedoteca. Sem culpa de "estragar" a decoração.
                 </p>
-                <p className="text-muted-foreground leading-relaxed text-lg">
-                  Isso é Design de Convivência. Isso é KASA SISSI.
+                <p className="text-muted-foreground leading-relaxed text-lg font-medium text-foreground">
+                  Uma casa que flui naturalmente. Isso é Design de Convivência. Isso é KASA SISSI.
                 </p>
               </div>
             </div>
@@ -183,9 +184,9 @@ export default function Home() {
         {/* CTA Section */}
         <section className="py-20 bg-accent text-primary-foreground">
           <div className="container text-center">
-            <h2 className="text-primary-foreground mb-6">Pronto para repensar sua convivência?</h2>
+            <h2 className="text-primary-foreground mb-6 text-3xl font-display">Pronto para repensar sua convivência?</h2>
             <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">
-              Explore nossa coleção ou fale conosco para conhecer as possibilidades de design para sua família.
+              Explore nossa coleção de marcenaria premium e descubra as melhores peças para integrar sua família com elegância.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/galeria">
