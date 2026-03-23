@@ -18,14 +18,12 @@ export default function Navigation() {
     <nav className="sticky top-0 z-50 bg-background border-b border-border">
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
-        <Link href="/">
-          <a className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <img
-              src="https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/IMG-20251214-WA0000_nv3uib"
-              alt="KASA SISSI"
-              className="h-10 w-auto"
-            />
-          </a>
+        <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <img
+            src="https://res.cloudinary.com/dipruvqks/image/upload/f_auto,q_auto/IMG-20251214-WA0000_nv3uib"
+            alt="KASA SISSI"
+            className="h-10 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -45,10 +43,8 @@ export default function Navigation() {
               );
             }
             return (
-              <Link key={link.href} href={link.href}>
-                <a className="text-foreground hover:text-accent transition-colors font-medium">
-                  {link.label}
-                </a>
+              <Link key={link.href} href={link.href} className="text-foreground hover:text-accent transition-colors font-medium">
+                {link.label}
               </Link>
             );
           })}
@@ -96,13 +92,8 @@ export default function Navigation() {
                 );
               }
               return (
-                <Link key={link.href} href={link.href}>
-                  <a
-                    className="text-foreground hover:text-accent transition-colors font-medium"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {link.label}
-                  </a>
+                <Link key={link.href} href={link.href} className="text-foreground hover:text-accent transition-colors font-medium" onClick={() => setIsOpen(false)}>
+                  {link.label}
                 </Link>
               );
             })}
