@@ -1,6 +1,6 @@
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sofa, Leaf, Heart } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
@@ -31,7 +31,7 @@ export default function Home() {
                   <ArrowRight className="ml-2" size={20} />
                 </Button>
               </Link>
-                <Button
+              <Button
                 onClick={() => window.open('https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seu%20design%20de%20convivência.', '_blank')}
                 size="lg"
                 variant="outline"
