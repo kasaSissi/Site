@@ -16,8 +16,8 @@ const faqs = [
     a: 'Gatificação é a adaptação do ambiente para atender às necessidades naturais do gato: escalar, observar de cima, descansar em locais elevados. Na KASA SISSI, fazemos isso com estética — sem transformar a casa num playground de plástico.',
   },
   {
-    q: 'Os nichos para gatos ficam na parede?',
-    a: 'Sim, a maioria dos modelos é fixada na parede, liberando o espaço do chão e integrando o móvel à decoração. Consulte as opções pelo WhatsApp.',
+    q: 'Os móveis para gatos são fixados ou ficam no chão?',
+    a: 'Temos modelos para as duas situações. Consulte as opções disponíveis pelo WhatsApp e veja qual se encaixa melhor na sua casa.',
   },
   {
     q: 'Posso combinar nichos e prateleiras para criar um percurso para o gato?',
@@ -47,7 +47,7 @@ export default function MoveisGatos() {
               Mais do que um móvel — uma forma de integrar infância, casa e convivência real.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-2xl">
-              Nichos, camas e móveis de parede para gatos em MDF. Gatificação estética que transforma a casa sem virar petshop. Seu gato feliz, sua casa linda. Sem conflito.
+              Nichos, camas e móveis para gatos em MDF. Gatificação estética que transforma a casa sem virar petshop. Seu gato feliz, sua casa linda. Sem conflito.
             </p>
             <a href={`https://wa.me/${WA_NUMBER}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white">
@@ -91,13 +91,13 @@ export default function MoveisGatos() {
             <h2 className="text-2xl font-display mb-6">Gatificação estética: seu gato feliz, sua casa linda</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                <strong>Móveis para gatos de parede</strong> são a solução perfeita para quem quer oferecer conforto e estimulação para o felino sem comprometer a decoração da casa. Na KASA SISSI, cada nicho, cama e prateleira para gato é pensada como uma peça de design — não como um acessório de petshop.
+                <strong>Móveis para gatos</strong> são a solução perfeita para quem quer oferecer conforto e estimulação para o felino sem comprometer a decoração da casa. Na KASA SISSI, cada nicho, cama e prateleira para gato é pensada como uma peça de design — não como um acessório de petshop.
               </p>
               <p>
-                A <strong>cama de gato de parede</strong> libera o espaço do chão, integra o gato ao ambiente e ainda vira um ponto focal bonito na decoração. O <strong>nicho para gato em MDF</strong> com almofada é confortável, resistente e elegante — combina com qualquer estilo de casa.
+                A <strong>cama de gato</strong> integra o felino ao ambiente e vira um ponto focal bonito na decoração. O <strong>nicho para gato em MDF</strong> com almofada é confortável, resistente e elegante — combina com qualquer estilo de casa.
               </p>
               <p>
-                Para quem quer ir além, criamos projetos de <strong>playground para gatos</strong> com percursos completos: nichos, prateleiras e passarelas que transformam a parede em um espaço de exploração para o gato — sem parecer que você mora num petshop.
+                Para quem quer ir além, temos <strong>playground para gatos</strong> com percursos completos: nichos, prateleiras e passarelas que criam um espaço de exploração para o gato — sem parecer que você mora num petshop.
               </p>
               <p>
                 Isso é gatificação KASA SISSI: estética, funcional e integrada à vida real da sua casa.

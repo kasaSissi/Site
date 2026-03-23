@@ -8,8 +8,8 @@ const WA_MSG = encodeURIComponent('Olá, vim pelo site e quero mais informaçõe
 
 const faqs = [
   {
-    q: 'A caminha elevada para gato é fixada na parede?',
-    a: 'Sim, a maioria dos modelos é fixada na parede, liberando o espaço do chão e integrando a caminha à decoração do ambiente.',
+    q: 'A caminha elevada para gato é fácil de instalar?',
+    a: 'Sim! Os modelos são projetados para fácil instalação e vêm com instruções completas. Consulte as opções pelo WhatsApp.',
   },
   {
     q: 'Qual é o peso suportado pela caminha?',
@@ -59,7 +59,7 @@ export default function CaminhaGato() {
               Mais do que um móvel — uma forma de integrar infância, casa e convivência real.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-2xl">
-              Cama para gato de parede em MDF com design elegante e moderno. Conforto para o seu felino, estilo para a sua casa. Sem cara de petshop — só decoração de verdade.
+              Cama para gato em MDF com design elegante e moderno. Conforto para o seu felino, estilo para a sua casa. Sem cara de petshop — só decoração de verdade.
             </p>
             <a href={`https://wa.me/${WA_NUMBER}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white">
@@ -106,13 +106,13 @@ export default function CaminhaGato() {
                 A <strong>cama para gato</strong> da KASA SISSI é diferente de tudo que você já viu. Esqueça as caminhas de pelúcia colorida que parecem brinquedo. Aqui, cada peça é projetada como um móvel de verdade — com MDF de qualidade, acabamento impecável e design que valoriza o ambiente.
               </p>
               <p>
-                A <strong>caminha para gato</strong> elevada de parede é uma das peças mais pedidas. Além de confortável, ela libera o espaço do chão, estimula o instinto natural do gato de observar de cima e vira um elemento decorativo na parede.
+                A <strong>caminha para gato</strong> elevada é uma das peças mais pedidas. Além de confortável, ela estimula o instinto natural do gato de observar de cima e vira um elemento decorativo lindíssimo no ambiente.
               </p>
               <p>
                 O <strong>nicho para gato</strong> com design cônico moderno é uma das assinaturas da KASA SISSI. Elegante, resistente e com almofada macia — o seu gato vai adorar, e a sua casa vai ficar ainda mais bonita.
               </p>
               <p>
-                Isso é a <strong>cama gato parede</strong> que você estava procurando: funcional, estética e integrada à vida real da sua casa.
+                Isso é a <strong>cama para gato</strong> que você estava procurando: funcional, estética e integrada à vida real da sua casa.
               </p>
             </div>
           </div>

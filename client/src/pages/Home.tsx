@@ -34,14 +34,14 @@ const categories = [
     description: 'Nichos, camas e gatificação estética. Sem cara de petshop.',
     href: '/moveis-para-gatos-mdf',
     emoji: '🐱',
-    keywords: 'nicho para gato, gatificação, móveis para gatos parede',
+    keywords: 'nicho para gato, gatificação, móveis para gatos',
   },
   {
     title: 'Caminha Elevada para Gato',
     description: 'Design cônico moderno. Conforto para o gato, estilo para a casa.',
     href: '/caminha-para-gato-mdf',
     emoji: '😺',
-    keywords: 'cama para gato, caminha para gato parede',
+    keywords: 'cama para gato, caminha para gato',
   },
   {
     title: 'Prateleiras em MDF',
@@ -198,7 +198,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-display mb-3">Gatificação Estética</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">
-                  Nichos, prateleiras e camas de parede para gatos. Gatificação que integra o felino à decoração — sem cara de petshop.
+                  Nichos, prateleiras e camas para gatos. Gatificação que integra o felino à decoração — sem cara de petshop.
                 </p>
               </div>
 
