@@ -17,7 +17,7 @@ const categories = [
   },
   {
     title: 'Mesa e Cadeira Infantil',
-    description: 'Mesa infantil de madeira para refeições, atividades e leitura.',
+    description: 'Mesa infantil em MDF para refeições, atividades e leitura.',
     href: '/mesa-infantil-mdf',
     emoji: '🪑',
     keywords: 'mesa infantil madeira, mesa montessori',
@@ -134,7 +134,7 @@ export default function Home() {
               <div>
                 <img
                   src="/hero-kasa-sissi.jpg"
-                  alt="Sala de estar com nicho para gato, caminha para cachorro e cozinha infantil de madeira - KASA SISSI"
+                  alt="Sala de estar com nicho para gato, caminha para cachorro e cozinha infantil em MDF - KASA SISSI"
                   className="rounded-2xl w-full object-cover shadow-lg"
                 />
               </div>

@@ -47,7 +47,7 @@ export default function MesaInfantil() {
               Mais do que um móvel — uma forma de integrar infância, casa e convivência real.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-2xl">
-              Mesa infantil de madeira MDF com design montessoriano. Ideal para refeições, atividades, desenho e leitura. Bonita o suficiente para ficar em qualquer ambiente da casa — sem parecer brinquedoteca.
+              Mesa infantil em MDF com design montessoriano. Ideal para refeições, atividades, desenho e leitura. Bonita o suficiente para ficar em qualquer ambiente da casa — sem parecer brinquedoteca.
             </p>
             <a href={`https://wa.me/${WA_NUMBER}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white">
@@ -88,7 +88,7 @@ export default function MesaInfantil() {
         {/* Texto SEO */}
         <section className="py-12 bg-secondary/10">
           <div className="container max-w-3xl">
-            <h2 className="text-2xl font-display mb-6">Mesa infantil de madeira: funcional e bonita</h2>
+            <h2 className="text-2xl font-display mb-6">Mesa infantil em MDF: funcional e bonita</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 A <strong>mesa infantil de madeira</strong> é muito mais do que um móvel para criança. É o espaço onde ela come, cria, aprende e se desenvolve. Por isso, cada detalhe importa: altura certa, material seguro, design que respeita o ambiente da casa.

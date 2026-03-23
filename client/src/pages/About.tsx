@@ -34,7 +34,7 @@ export default function About() {
                   Nossos móveis de marcenaria premium são projetados para famílias contemporâneas. Através de soluções inteligentes de <strong>gatificação estética</strong>, <strong>dog living</strong>, <strong>móveis infantis montessorianos</strong> e <strong>móveis funcionais para toda a casa</strong>, garantimos que cada ambiente seja belo e prático ao mesmo tempo.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-lg font-medium">
-                  Em parceria com a fábrica <em>Chiko i Kiare</em>, entregamos qualidade premium, acabamento impecável e madeira natural. Isso é KASA SISSI.
+                  Em parceria com a fábrica <em>Chiko i Kiare</em>, entregamos qualidade premium, acabamento impecável e MDF de alta qualidade. Isso é KASA SISSI.
                 </p>
               </div>
               <img

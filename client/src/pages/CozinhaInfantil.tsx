@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     q: 'Posso escolher a cor?',
-    a: 'Sim! Trabalhamos com acabamentos em branco, natural madeira e outras opções. Consulte disponibilidade pelo WhatsApp.',
+    a: 'Sim! Trabalhamos com acabamentos em branco, amadeirado e outras opções. Consulte disponibilidade pelo WhatsApp.',
   },
   {
     q: 'Vocês entregam em todo o Brasil?',
@@ -95,7 +95,7 @@ export default function CozinhaInfantil() {
                 A <strong>cozinha infantil em MDF</strong> é uma das peças mais completas para o desenvolvimento da criança. Ao imitar o ambiente da cozinha real, ela estimula a imaginação, a linguagem, a coordenação motora e a convivência social — tudo isso de forma lúdica e natural.
               </p>
               <p>
-                Na KASA SISSI, cada <strong>cozinha infantil de madeira</strong> é pensada para ser bonita o suficiente para ficar na sala, no quarto ou em qualquer ambiente da casa. Sem cores berrantes, sem plástico barato. Só madeira MDF de qualidade, acabamento impecável e design que conversa com a decoração da sua casa.
+                Na KASA SISSI, cada <strong>cozinha infantil em MDF</strong> é pensada para ser bonita o suficiente para ficar na sala, no quarto ou em qualquer ambiente da casa. Sem cores berrantes, sem plástico barato. Só MDF de qualidade, acabamento impecável e design que conversa com a decoração da sua casa.
               </p>
               <p>
                 Seguindo os princípios da <strong>cozinha montessori</strong>, nossas peças têm altura adequada para a criança, superfícies seguras e espaços que incentivam a autonomia. A criança aprende fazendo — e faz com alegria.
