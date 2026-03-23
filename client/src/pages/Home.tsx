@@ -18,12 +18,11 @@ export default function Home() {
             <div className="mb-6">
               <span className="text-accent font-semibold text-sm tracking-widest uppercase">Design de Convivência</span>
             </div>
-            <h1 className="text-foreground mb-6 leading-tight text-4xl md:text-6xl">
-              Móveis Premium para Integrar Crianças e Pets
+            <h1 className="text-foreground mb-6 leading-tight">
+              Casa de revista na vida real
             </h1>
-            <h2 className="text-2xl md:text-3xl font-display text-foreground/90 mb-4">A casa de revista na vida real</h2>
             <p className="text-muted-foreground text-xl mb-8 leading-relaxed max-w-2xl">
-              Aquela casa linda que você vê em revista, mas que REALMENTE funciona. Móveis de marcenaria funcional para gatificação, dog living e desenvolvimento infantil. Tudo no lugar, tudo bonito. Sem conflitos, sem bagunça, sem culpa.
+              Aquela casa cheia de vida e alegria que você vê em revista, mas que REALMENTE funciona. Com pets, crianças e momentos reais. Tudo no lugar, tudo bonito. Sem cara de petshop. Sem cara de brinquedoteca. Só casa.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/galeria">
@@ -93,9 +92,9 @@ export default function Home() {
                 <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
                   <span className="text-2xl">⚙️</span>
                 </div>
-                <h3 className="text-2xl font-display mb-4">Móveis Funcionais</h3>
+                <h3 className="text-2xl font-display mb-4">Casa Funcional</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Cada centímetro serve um propósito. Armazenamento inteligente, acabamento impecável, design que melhora a vida. Beleza que funciona.
+                  Prateleiras, nichos, móveis de entrada e soluções para toda a casa. Cada centímetro serve um propósito. Armazenamento inteligente, acabamento impecável, design que melhora a vida. Beleza que funciona.
                 </p>
               </div>
             </div>
@@ -162,19 +161,19 @@ export default function Home() {
         <section className="py-20 bg-background">
           <div className="container">
             <div className="max-w-3xl">
-              <h2 className="mb-8 text-3xl font-display">Design de Convivência: O Fim do Conflito Estético</h2>
+              <h2 className="mb-8 text-3xl font-display">Casa de Revista na Vida Real</h2>
               <div className="space-y-6">
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  A KASA SISSI não faz apenas móveis "para pet" ou "para criança". Nós criamos soluções de marcenaria premium para famílias que não abrem mão da elegância.
+                  A KASA SISSI não faz móveis "para pet" ou "para criança". Faz móveis para aquela casa linda que você vê em revista, mas que REALMENTE funciona.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  Imagine uma sala onde seu cão descansa em um nicho que parece uma obra de arte. Onde a <strong>gatificação</strong> acontece através de prateleiras que complementam a sua decoração. Onde a <strong>bancada de marcenaria infantil</strong> ou a cozinha de brincar da sua filha se integram à paleta de cores da casa.
+                  Onde seu cão descansa em um nicho elegante. Onde a <strong>gatificação</strong> acontece através de prateleiras que decoram. Onde a cozinha de brincar da sua filha se integra à paleta da casa. Onde a prateleira da entrada organiza sem perder o estilo. Uma casa cheia de vida e alegria, mas toda integrada.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  Você pode trabalhar em paz, enquanto as crianças brincam e os pets relaxam. Sem a casa parecer um petshop ou uma brinquedoteca. Sem culpa de "estragar" a decoração.
+                  Sem cara de petshop. Sem cara de brinquedoteca. Sem conflito entre beleza e funcionalidade. Sem culpa de "estragar" a decoração.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-lg font-medium text-foreground">
-                  Uma casa que flui naturalmente. Isso é Design de Convivência. Isso é KASA SISSI.
+                  Só uma casa que flui naturalmente. Isso é Design de Convivência. Isso é KASA SISSI.
                 </p>
               </div>
             </div>

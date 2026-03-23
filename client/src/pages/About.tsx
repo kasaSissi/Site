@@ -31,7 +31,7 @@ export default function About() {
                   A KASA SISSI nasceu da crença de que um lar não precisa perder a elegância para ser funcional. Criamos espaços onde o <strong>design de convivência</strong> permite que a vida real aconteça sem conflitos estéticos.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
-                  Nossos móveis de marcenaria premium são projetados para famílias contemporâneas. Através de soluções inteligentes de <strong>gatificação estética</strong>, <strong>dog living</strong> e <strong>móveis infantis montessorianos</strong>, garantimos que crianças brinquem e pets descansem em harmonia com a decoração da sua casa.
+                  Nossos móveis de marcenaria premium são projetados para famílias contemporâneas. Através de soluções inteligentes de <strong>gatificação estética</strong>, <strong>dog living</strong>, <strong>móveis infantis montessorianos</strong> e <strong>móveis funcionais para toda a casa</strong>, garantimos que cada ambiente seja belo e prático ao mesmo tempo.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-lg font-medium">
                   Em parceria com a fábrica <em>Chiko i Kiare</em>, entregamos qualidade premium, acabamento impecável e madeira natural. Isso é KASA SISSI.
@@ -93,6 +93,7 @@ export default function About() {
                 'Design de convivência: integra humanos, crianças e pets sem perder a elegância',
                 'Gatificação estética e soluções inteligentes de dog living',
                 'Móveis infantis que acompanham o desenvolvimento e decoram o ambiente',
+                'Prateleiras, nichos e móveis funcionais para toda a casa',
                 'Estética minimalista e nórdica que se adapta a projetos arquitetônicos contemporâneos',
                 'Produção em parceria com a excelência fabril da Chiko i Kiare'
               ].map((item, idx) => (
