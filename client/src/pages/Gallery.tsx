@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { MessageCircle, Loader2 } from 'lucide-react';
+import { MessageCircle, Loader2, Trash2, Plus } from 'lucide-react';
 
 const CATEGORIES = [
   { id: 'all', label: 'Todos' },
@@ -24,119 +26,96 @@ interface Product {
   isBanco?: boolean;
 }
 
-const CLOUDINARY_CLOUD_NAME = '7abf63b8135fcdce3499e218d6d578';
-const CLOUDINARY_FOLDER = 'Home';
-
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const [showUploadInfo, setShowUploadInfo] = useState(false);
   const [products, setProducts] = useState<Product[]>([]);
   const [bancoProducts, setBancoProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(true);
   const [showBanco, setShowBanco] = useState(false);
+  const [showAddForm, setShowAddForm] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    category: 'cozinha',
+    description: '',
+    image: '',
+    isBanco: false
+  });
 
-  // Fetch images from Cloudinary
-  useEffect(() => {
-    const fetchCloudinaryImages = async () => {
-      try {
-        setLoading(true);
-        // Fetch resources from Cloudinary using their API
-        // Use Cloudinary Search API to get images from Home folder
-        const response = await fetch(
-          `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/resources/search`,
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              expression: `folder:"${CLOUDINARY_FOLDER}"`,
-              max_results: 500,
-              sort_by: [['created_at', 'desc']]
-            })
-          }
-        );
-        
-        if (response.ok) {
-          const data = await response.json();
-          
-          // Separate products into two groups: specific categories and banco (general pool)
-          const specificProducts: Product[] = [];
-          const bancoImages: Product[] = [];
+  const addProduct = () => {
+    if (!formData.image.trim()) {
+      alert('Por favor, adicione um link de imagem');
+      return;
+    }
 
-          const resources = data.resources || [];
-          resources.forEach((resource: any, index: number) => {
-            const tags = resource.tags || [];
-            const isBanco = tags.includes('banco');
-
-            const product: Product = {
-              id: resource.public_id,
-              name: resource.display_name || `Produto ${index + 1}`,
-              category: 'outros',
-              description: resource.description || 'Móvel funcional e elegante para sua casa.',
-              image: resource.secure_url,
-              isBanco: isBanco
-            };
-
-            if (isBanco) {
-              bancoImages.push(product);
-            } else {
-              // Extract category from tags
-              let category = 'outros';
-              CATEGORIES.forEach(cat => {
-                if (cat.id !== 'all' && tags.includes(cat.id)) {
-                  category = cat.id;
-                }
-              });
-              product.category = category;
-              specificProducts.push(product);
-            }
-          });
-
-          setProducts(specificProducts);
-          setBancoProducts(bancoImages);
-        } else {
-          setProducts([]);
-          setBancoProducts([]);
-        }
-      } catch (error) {
-        console.error('Erro ao carregar imagens:', error);
-        setProducts([]);
-        setBancoProducts([]);
-      } finally {
-        setLoading(false);
-      }
+    const newProduct: Product = {
+      id: `product-${Date.now()}`,
+      name: formData.name || `Produto ${products.length + 1}`,
+      category: formData.category,
+      description: formData.description || 'Móvel funcional e elegante para sua casa.',
+      image: formData.image,
+      isBanco: formData.isBanco
     };
 
-    fetchCloudinaryImages();
-  }, []);
+    if (formData.isBanco) {
+      setBancoProducts([...bancoProducts, newProduct]);
+    } else {
+      setProducts([...products, newProduct]);
+    }
 
-  const filteredProducts = selectedCategory === 'all'
-    ? products
+    // Reset form
+    setFormData({
+      name: '',
+      category: 'cozinha',
+      description: '',
+      image: '',
+      isBanco: false
+    });
+    setShowAddForm(false);
+  };
+
+  const deleteProduct = (id: string, isBanco: boolean) => {
+    if (isBanco) {
+      setBancoProducts(bancoProducts.filter(p => p.id !== id));
+    } else {
+      setProducts(products.filter(p => p.id !== id));
+    }
+  };
+
+  const filteredProducts = selectedCategory === 'all' 
+    ? products 
     : products.filter(p => p.category === selectedCategory);
 
-  const renderProductGrid = (productList: Product[]) => (
+  const renderProductGrid = (items: Product[]) => (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {productList.map(product => (
-        <div
-          key={product.id}
-          className="group cursor-pointer"
-          onClick={() => setSelectedProduct(product)}
-        >
-          <div className="overflow-hidden rounded-lg mb-4 bg-muted">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-            />
+      {items.map(product => (
+        <div key={product.id} className="group">
+          <div className="relative overflow-hidden rounded-lg mb-4 bg-muted h-64 flex items-center justify-center">
+            {product.image ? (
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            ) : (
+              <p className="text-muted-foreground">Imagem não carregada</p>
+            )}
           </div>
-          <h3 className="text-lg font-display mb-2 group-hover:text-accent transition-colors">
-            {product.name}
-          </h3>
-          <p className="text-sm text-muted-foreground line-clamp-2">
-            {product.description}
-          </p>
+          <h3 className="text-lg font-display mb-2">{product.name}</h3>
+          <p className="text-muted-foreground text-sm mb-4">{product.description}</p>
+          <div className="flex gap-2">
+            <button
+              onClick={() => setSelectedProduct(product)}
+              className="flex-1 text-accent hover:text-accent/80 font-semibold text-sm"
+            >
+              Ver detalhes
+            </button>
+            <button
+              onClick={() => deleteProduct(product.id, product.isBanco || false)}
+              className="text-destructive hover:text-destructive/80"
+            >
+              <Trash2 size={18} />
+            </button>
+          </div>
         </div>
       ))}
     </div>
@@ -147,64 +126,69 @@ export default function Gallery() {
       <Navigation />
 
       <main className="flex-1">
-        {/* Header */}
-        <section className="py-12 bg-secondary/20">
+        {/* Hero Section */}
+        <section className="py-16 bg-secondary/20">
           <div className="container">
-            <h1 className="mb-4">Galeria de Produtos</h1>
-            <p className="text-muted-foreground max-w-2xl">
-              Explore nossa coleção completa de móveis funcionais e estéticos. Cada peça é cuidadosamente projetada para integrar-se perfeitamente ao seu espaço.
+            <h1 className="mb-4">Galeria de Móveis</h1>
+            <p className="text-muted-foreground text-lg max-w-2xl">
+              Explore nossa coleção de móveis funcionais e elegantes, pensados para integrar sua família e seus pets.
             </p>
           </div>
         </section>
 
-        {/* Filters */}
-        <section className="py-8 bg-background border-b border-border">
+        {/* Gallery Section */}
+        <section className="py-16">
           <div className="container">
-            <div className="flex flex-wrap gap-2">
-              {CATEGORIES.map(category => (
-                <button
-                  key={category.id}
-                  onClick={() => {
-                    setSelectedCategory(category.id);
-                    setShowBanco(false);
-                  }}
-                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                    selectedCategory === category.id && !showBanco
-                      ? 'bg-accent text-primary-foreground'
-                      : 'bg-muted text-foreground hover:bg-muted/80'
-                  }`}
-                >
-                  {category.label}
-                </button>
-              ))}
-              {bancoProducts.length > 0 && (
-                <button
-                  onClick={() => {
-                    setShowBanco(true);
-                    setSelectedCategory('all');
-                  }}
-                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                    showBanco
-                      ? 'bg-accent text-primary-foreground'
-                      : 'bg-muted text-foreground hover:bg-muted/80'
-                  }`}
-                >
-                  Galeria de Fotos
-                </button>
-              )}
+            {/* Add Product Button */}
+            <div className="mb-12">
+              <Button
+                onClick={() => setShowAddForm(true)}
+                className="bg-accent hover:bg-accent/90 text-primary-foreground"
+              >
+                <Plus size={20} className="mr-2" />
+                Adicionar Produto
+              </Button>
             </div>
-          </div>
-        </section>
 
-        {/* Gallery Grid */}
-        <section className="py-16 bg-background">
-          <div className="container">
-            {loading ? (
-              <div className="flex justify-center items-center py-16">
-                <Loader2 className="animate-spin mr-2" size={24} />
-                <p className="text-muted-foreground">Carregando produtos...</p>
+            {/* Category Filter */}
+            <div className="mb-12">
+              <div className="flex flex-wrap gap-3">
+                {CATEGORIES.map(category => (
+                  <button
+                    key={category.id}
+                    onClick={() => {
+                      setShowBanco(false);
+                      setSelectedCategory(category.id);
+                    }}
+                    className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                      selectedCategory === category.id && !showBanco
+                        ? 'bg-accent text-primary-foreground'
+                        : 'bg-muted text-foreground hover:bg-muted/80'
+                    }`}
+                  >
+                    {category.label}
+                  </button>
+                ))}
+                {bancoProducts.length > 0 && (
+                  <button
+                    onClick={() => {
+                      setShowBanco(true);
+                      setSelectedCategory('all');
+                    }}
+                    className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                      showBanco
+                        ? 'bg-accent text-primary-foreground'
+                        : 'bg-muted text-foreground hover:bg-muted/80'
+                    }`}
+                  >
+                    Galeria de Fotos
+                  </button>
+                )}
               </div>
-            ) : showBanco ? (
+            </div>
+
+            {/* Products Grid */}
+            {showBanco ? (
               bancoProducts.length > 0 ? (
                 <>
                   <h2 className="text-2xl font-display mb-8">Galeria de Fotos</h2>
@@ -221,101 +205,160 @@ export default function Gallery() {
               renderProductGrid(filteredProducts)
             ) : (
               <div className="text-center py-16">
-                <p className="text-muted-foreground text-lg mb-6">
-                  Nenhum produto nesta categoria ainda.
+                <p className="text-muted-foreground text-lg">
+                  Nenhum produto disponível nesta categoria ainda.
                 </p>
-                <Button
-                  onClick={() => setShowUploadInfo(true)}
-                  className="bg-accent hover:bg-accent/90 text-primary-foreground"
-                >
-                  Adicionar Produtos
-                </Button>
               </div>
             )}
           </div>
         </section>
 
         {/* Upload Info Section */}
-        {products.length === 0 && bancoProducts.length === 0 && !loading && (
-          <section className="py-16 bg-secondary/20">
-            <div className="container text-center">
-              <h2 className="mb-6">Sua galeria está vazia?</h2>
-              <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Faça upload de suas fotos no Cloudinary e elas aparecerão automaticamente aqui!
-              </p>
-              <Button
-                onClick={() => setShowUploadInfo(true)}
-                className="bg-accent hover:bg-accent/90 text-primary-foreground"
-              >
-                Como Fazer Upload de Produtos
+        <section className="py-16 bg-secondary/20">
+          <div className="container max-w-2xl">
+            <h2 className="mb-6">Como Adicionar Produtos</h2>
+            <ol className="space-y-4 text-muted-foreground">
+              <li>
+                <strong>1. Clique em "Adicionar Produto"</strong> acima
+              </li>
+              <li>
+                <strong>2. Preencha os dados:</strong>
+                <ul className="mt-2 ml-4 space-y-2">
+                  <li>• <code className="bg-muted px-2 py-1 rounded">Nome</code> - Nome do móvel</li>
+                  <li>• <code className="bg-muted px-2 py-1 rounded">Categoria</code> - Escolha a categoria</li>
+                  <li>• <code className="bg-muted px-2 py-1 rounded">Descrição</code> - Detalhes do produto</li>
+                  <li>• <code className="bg-muted px-2 py-1 rounded">Link da Imagem</code> - URL do Cloudinary</li>
+                  <li>• <code className="bg-muted px-2 py-1 rounded">Galeria de Fotos</code> - Marque para adicionar ao pool geral</li>
+                </ul>
+              </li>
+              <li>
+                <strong>3. Clique em "Adicionar"</strong> e o produto aparecerá na galeria!
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 bg-accent text-primary-foreground">
+          <div className="container text-center">
+            <h2 className="text-primary-foreground mb-6">Gostou de algum móvel?</h2>
+            <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">
+              Fale conosco pelo WhatsApp e conheça mais detalhes, preços e possibilidades de customização.
+            </p>
+            <a
+              href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20móveis."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="bg-primary-foreground text-accent hover:bg-primary-foreground/90">
+                <MessageCircle className="mr-2" size={20} />
+                Conversar no WhatsApp
               </Button>
-            </div>
-          </section>
-        )}
+            </a>
+          </div>
+        </section>
       </main>
 
-      {/* Product Modal */}
-      <Dialog open={!!selectedProduct} onOpenChange={(open) => !open && setSelectedProduct(null)}>
-        <DialogContent className="max-w-2xl">
+      {/* Add Product Form Dialog */}
+      <Dialog open={showAddForm} onOpenChange={setShowAddForm}>
+        <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle>{selectedProduct?.name}</DialogTitle>
+            <DialogTitle>Adicionar Novo Produto</DialogTitle>
           </DialogHeader>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {selectedProduct?.image && (
-              <img
-                src={selectedProduct.image}
-                alt={selectedProduct.name}
-                className="w-full h-96 object-cover rounded-lg"
+          <div className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium mb-2">Nome do Produto</label>
+              <Input
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                placeholder="Ex: Cozinha Infantil Premium"
               />
-            )}
-            <div className="flex flex-col justify-between">
-              <div>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  {selectedProduct?.description}
-                </p>
-              </div>
-              <a
-                href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Tenho%20interesse%20neste%20produto."
-                target="_blank"
-                rel="noopener noreferrer"
+            </div>
+            <div>
+              <label className="block text-sm font-medium mb-2">Categoria</label>
+              <select
+                value={formData.category}
+                onChange={(e) => setFormData({ ...formData, category: e.target.value })}
+                className="w-full px-3 py-2 border border-border rounded-lg"
               >
-                <Button className="w-full bg-accent hover:bg-accent/90 text-primary-foreground">
-                  <MessageCircle className="mr-2" size={20} />
-                  Fale Conosco no WhatsApp
-                </Button>
-              </a>
+                {CATEGORIES.filter(c => c.id !== 'all').map(cat => (
+                  <option key={cat.id} value={cat.id}>{cat.label}</option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium mb-2">Descrição</label>
+              <Textarea
+                value={formData.description}
+                onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+                placeholder="Descreva o móvel..."
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium mb-2">Link da Imagem (Cloudinary)</label>
+              <Input
+                value={formData.image}
+                onChange={(e) => setFormData({ ...formData, image: e.target.value })}
+                placeholder="https://res.cloudinary.com/..."
+              />
+            </div>
+            <div className="flex items-center gap-2">
+              <input
+                type="checkbox"
+                id="isBanco"
+                checked={formData.isBanco}
+                onChange={(e) => setFormData({ ...formData, isBanco: e.target.checked })}
+                className="rounded"
+              />
+              <label htmlFor="isBanco" className="text-sm font-medium">
+                Adicionar à Galeria de Fotos (pool geral)
+              </label>
+            </div>
+            <div className="flex gap-2 pt-4">
+              <Button
+                onClick={addProduct}
+                className="flex-1 bg-accent hover:bg-accent/90 text-primary-foreground"
+              >
+                Adicionar
+              </Button>
+              <Button
+                onClick={() => setShowAddForm(false)}
+                variant="outline"
+                className="flex-1"
+              >
+                Cancelar
+              </Button>
             </div>
           </div>
         </DialogContent>
       </Dialog>
 
-      {/* Upload Info Modal */}
-      <Dialog open={showUploadInfo} onOpenChange={setShowUploadInfo}>
+      {/* Product Detail Dialog */}
+      <Dialog open={!!selectedProduct} onOpenChange={() => setSelectedProduct(null)}>
         <DialogContent className="max-w-2xl">
           <DialogHeader>
-            <DialogTitle>Como Adicionar Produtos</DialogTitle>
+            <DialogTitle>{selectedProduct?.name}</DialogTitle>
           </DialogHeader>
-          <div className="space-y-4">
-            <p className="text-muted-foreground">
-              Para adicionar suas fotos de produtos automaticamente:
-            </p>
-            <ol className="list-decimal list-inside space-y-3 text-muted-foreground">
-              <li>Acesse sua conta no <strong>Cloudinary</strong> (cloudinary.com)</li>
-              <li>Faça upload de suas fotos de produtos</li>
-              <li>Adicione tags para categorizar:
-                <ul className="list-disc list-inside ml-4 mt-2">
-                  <li><code className="bg-muted px-2 py-1 rounded">cozinhas</code> - Cozinhas infantis</li>
-                  <li><code className="bg-muted px-2 py-1 rounded">bancadas</code> - Bancadas</li>
-                  <li><code className="bg-muted px-2 py-1 rounded">pet</code> - Móveis pet</li>
-                  <li><code className="bg-muted px-2 py-1 rounded">mesas</code> - Mesas</li>
-                  <li><code className="bg-muted px-2 py-1 rounded">prateleiras</code> - Prateleiras</li>
-                  <li><code className="bg-muted px-2 py-1 rounded">outros</code> - Outros móveis</li>
-                  <li><code className="bg-muted px-2 py-1 rounded">banco</code> - Galeria de Fotos (fotos menos editadas)</li>
-                </ul>
-              </li>
-              <li>As imagens aparecerão automaticamente aqui!</li>
-            </ol>
-          </div>
+          {selectedProduct && (
+            <div className="space-y-4">
+              <img
+                src={selectedProduct.image}
+                alt={selectedProduct.name}
+                className="w-full h-96 object-cover rounded-lg"
+              />
+              <p className="text-muted-foreground">{selectedProduct.description}</p>
+              <a
+                href="https://wa.me/5541984681605?text=Olá%20KASA%20SISSI!%20Gostaria%20de%20saber%20mais%20sobre%20este%20móvel."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="w-full bg-accent hover:bg-accent/90 text-primary-foreground">
+                  <MessageCircle className="mr-2" size={20} />
+                  Conversar no WhatsApp
+                </Button>
+              </a>
+            </div>
+          )}
         </DialogContent>
       </Dialog>
 
