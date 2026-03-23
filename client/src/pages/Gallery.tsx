@@ -7,10 +7,10 @@ import { MessageCircle, Loader2 } from 'lucide-react';
 
 const CATEGORIES = [
   { id: 'all', label: 'Todos' },
-  { id: 'cozinhas', label: 'Cozinhas Infantis' },
+  { id: 'cozinha', label: 'Cozinhas Infantis' },
   { id: 'bancadas', label: 'Bancadas' },
   { id: 'pet', label: 'Móveis Pet' },
-  { id: 'mesas', label: 'Mesas' },
+  { id: 'mesas-infantis', label: 'Mesas Infantis' },
   { id: 'prateleiras', label: 'Prateleiras' },
   { id: 'outros', label: 'Outros' }
 ];
@@ -24,8 +24,8 @@ interface Product {
   isBanco?: boolean;
 }
 
-const CLOUDINARY_CLOUD_NAME = 'dipruvqks';
-const CLOUDINARY_PRESET = 'Sitekasasissi';
+const CLOUDINARY_CLOUD_NAME = '7abf63b8135fcdce3499e218d6d578';
+const CLOUDINARY_FOLDER = 'Home';
 
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -42,8 +42,20 @@ export default function Gallery() {
       try {
         setLoading(true);
         // Fetch resources from Cloudinary using their API
+        // Use Cloudinary Search API to get images from Home folder
         const response = await fetch(
-          `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/list/${CLOUDINARY_PRESET}.json`
+          `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/resources/search`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              expression: `folder:"${CLOUDINARY_FOLDER}"`,
+              max_results: 500,
+              sort_by: [['created_at', 'desc']]
+            })
+          }
         );
         
         if (response.ok) {
@@ -53,7 +65,8 @@ export default function Gallery() {
           const specificProducts: Product[] = [];
           const bancoImages: Product[] = [];
 
-          data.resources.forEach((resource: any, index: number) => {
+          const resources = data.resources || [];
+          resources.forEach((resource: any, index: number) => {
             const tags = resource.tags || [];
             const isBanco = tags.includes('banco');
 
